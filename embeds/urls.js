@@ -2,7 +2,7 @@ const axios = require("axios")
 module.exports = (async()=> {
     var repos = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
     .map(json=> {
-        if(json.verified) return "  <:verified:1027693463573114903> " + json.url.split("/")[4] + " :\n" + json.url
+        if(json.verified) return "  <:verified:1027693463573114903> " + json.url.split("/")[4] + " :\n[Install](" + json.url + ")"
         else return "  <:unverified:1027697945694453821> " + json.split("/")[4] + ":\n" + json
     })
     return {
