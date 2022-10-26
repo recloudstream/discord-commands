@@ -3,6 +3,8 @@
 ```js
 module.exports = new function main() {
   this.content = "Hello"
+  this.files = ["https://image.png", "https://video.mp4"]
+  this.components = [Rows[Buttons, Select Menu etc...]]
   this.embeds = [{
       "description": "..",
     },
@@ -58,8 +60,13 @@ This above should be a value of embeds (Max 10 embeds) in the constructor we are
 
 Max 2000 characters
 
+## Files
 
+Array of string has links to media to upload in the message
 
+## Components
+
+buttons shit
 
 <br><br><br>
 Very good explanation thank u i know
