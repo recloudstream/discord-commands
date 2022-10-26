@@ -1,7 +1,7 @@
 const getFiles = require("../functions/getFiles.js")
 module.exports = (async()=> {
     return [{
-        "title": "Extensions - Embeds",
+        "title": "Embeds Extensions",
         "description": (await getFiles("embeds")).map(json=> json.name).join("\n"),
         "color": 3407616
     }]
