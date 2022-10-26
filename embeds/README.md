@@ -4,7 +4,20 @@
 module.exports = new function main() {
   this.content = "Hello"
   this.files = ["https://image.png", "https://video.mp4"]
-  this.components = [Rows[Buttons, Select Menu etc...]]
+  this.components = [
+    {
+        "type": 1,
+        "components": [
+            {
+                "type": 2,
+                "label": "Click me!",
+                "url": "https://discord.com/developers/docs/interactions/message-components#action-rows",
+                "style": 5,
+                "emoji": "😀"
+            }
+        ]
+    }
+  ]
   this.embeds = [{
       "description": "..",
     },
