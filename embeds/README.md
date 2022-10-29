@@ -81,5 +81,9 @@ Array of string has links to media to upload in the message
 
 buttons shit
 
+## onlyIDs
+
+Array of strings has iDs of people allowed to use it
+
 <br><br><br>
 Very good explanation thank u i know
