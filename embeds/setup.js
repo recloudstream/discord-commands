@@ -1,7 +1,7 @@
 module.exports = new function main() {
   this.files = ["https://cutt.ly/cs3start"]
   this.embeds = [{
-      "description": "
+      "description": `
 **Cloudstream setup process: **
 
 **Step 1:** Download and install the [pre-release](https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease.apk).
@@ -9,7 +9,6 @@ module.exports = new function main() {
 
 If you need more guides, go to #links.
 
-[Video guide](https://cutt.ly/cs3start) of the setup process ⬇️
-",
+[Video guide](https://cutt.ly/cs3start) of the setup process ⬇️ `,
     }]
 }
