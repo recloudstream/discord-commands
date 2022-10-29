@@ -13,7 +13,7 @@ class AsyncConstructor {
                 "components": [
                     {
                         "type": 2,
-                        "label": "Edit on Github.",
+                        "label": "Edit on Github",
                         "url": "https://github.com/ImZaw/discord-extensions/tree/master/embeds",
                         "style": 5,
                         "emoji": "✍️"
