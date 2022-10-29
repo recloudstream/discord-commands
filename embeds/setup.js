@@ -1,5 +1,5 @@
 module.exports = new function main() {
-  this.files = ["https://cutt.ly/cs3start"]
+  this.files = ["https://cdn.discordapp.com/attachments/1008207706143871067/1030755127189065748/cs3start.mp4"]
   this.embeds = [{
       "description": `
 **Cloudstream setup process: **
