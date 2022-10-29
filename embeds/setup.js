@@ -1,6 +1,6 @@
 module.exports = new function main() {
   this.files = ["https://cutt.ly/cs3start"]
-  the this.embeds = [{
+  this.embeds = [{
       "description": "
 **Cloudstream setup process: **
 
