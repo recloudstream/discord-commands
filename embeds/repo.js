@@ -4,7 +4,7 @@ class AsyncConstructor {
     return (async () => {
         var repos = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
         .map(async json=> {
-	    var name = (await axios.get(json.url)).data.name
+	    var name = (await axios.get(json.url ?? json)).data.name
             if(json.verified) return "  <:verified:1027693463573114903> " + name + " :\n[Install](" + json.url + ")"
             else return name + ":\n[Install](" + json + ")"
         })
