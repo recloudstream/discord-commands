@@ -11,7 +11,7 @@ module.exports = new function main()
 3. Loklok [Hexated](https://cutt.ly/dirhex) \n
 4. Ask4movies [English](https://cutt.ly/diren) \n
 5. Olgply [English](https://cutt.ly/diren) \n
- \n
+
 **Anime** \n
 1. Animixplay [Hexated](https://cutt.ly/dirhex) \n
 2. Crunchyroll **(disabled)** [English](https://cutt.ly/diren) \n
