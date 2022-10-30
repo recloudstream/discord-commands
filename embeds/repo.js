@@ -7,7 +7,7 @@ class AsyncConstructor {
 	for (const repo in repos) {
 	    var json = repos[repo]
 	    var name = (await axios.get(json.url ?? json)).data.name.replace(/ providers repository| Providers Repository| Providers/g, "")
-	    if(json.verified) arrayRepos.push(" <:verified:1027693463573114903> " + name + " : [Install](https://cs.repo/?" + json.url.replace("https://", "") + ")")
+	    if(json.verified) arrayRepos.push("<:verified:1027693463573114903> " + name + " : [Install](https://cs.repo/?" + json.url.replace("https://", "") + ")")
             else arrayRepos.push(name + ": [Install](https://cs.repo/?" + json.replace("https://", "") + ")")
 	}
         this.embeds = [{
