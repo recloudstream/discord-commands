@@ -20,14 +20,13 @@ class AsyncConstructor {
 		}
 		var allEmbeds = []
 		chunk(allList, 30).forEach(data=> {
-			console.log(data.map(it=> `${it.internalName.replace("Provider", "")}`).join(", ").length)
 			allEmbeds.push({
 			"description": data.map(it=> `${it.internalName.replace("Provider", "")}`).join(", "),
 			"color": null
 		})
 		})
         this.embeds = allEmbeds
-		this.onlyiDs = ["326466810150912000"]
+	this.onlyIDs = ["326466810150912000"]
         return this;
         })();
     }
