@@ -5,7 +5,6 @@
       "title": "For manual install, copy/type the link in the repo box (`cs3 > Settings > Extensions > Add repository`)",
       "description": `
       
-:diamond_shape_with_a_dot_inside: **** \n
 :small_blue_diamond: english: https://cutt.ly/engrepo \n
 :small_blue_diamond: multi: https://cutt.ly/multirepo \n
 :small_blue_diamond: arabic: https://cutt.ly/arabrepo \n
