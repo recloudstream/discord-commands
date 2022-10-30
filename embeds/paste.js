@@ -14,7 +14,7 @@
 :small_blue_diamond: LikDev:  https://cutt.ly/likrepo \n
 :small_blue_diamond: nsfw: https://cutt.ly/horni \n
 
-:warning: **Put the repo name in the name section. Also don't skip "https://". **  \n
+:warning: ** Put the repo name in the name section. Also don't skip "https://". **  \n
       
       `,
     }]
