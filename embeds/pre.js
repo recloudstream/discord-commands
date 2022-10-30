@@ -10,3 +10,4 @@ module.exports = new function main()
       }
     }
   ]
+}
