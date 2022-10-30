@@ -4,8 +4,7 @@ module.exports = new function main()
   this.embeds = [{
       "title": "Reccomended English Sources",
       "description": `
-      
-      
+           
 **Movies & Series** \n
 1. Super stream [English](https://cutt.ly/diren) \n
 2. Sora stream [Hexated](https://cutt.ly/dirhex) \n
