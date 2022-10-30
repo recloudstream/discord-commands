@@ -9,6 +9,5 @@ module.exports = new function main()
 **Step 2:** Install the [repositories](https://cloudstream.cf/repos).
 
 If you need more guides, go to <#1031508285393748008>. `,
-this.files = ["https://cdn.discordapp.com/attachments/1008207706143871067/1030755127189065748/cs3start.mp4"],
     }]
 }
