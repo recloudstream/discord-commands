@@ -17,7 +17,7 @@ module.exports = new function main()
       "color": 15000804
     },
     {
-      "description": "If you dont get any solution, put this in <#1019975050104950865>",
+      "description": "If you don't get any solution, put this in <#1019975050104950865>",
       "color": 15000804
     }]
 }
