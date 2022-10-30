@@ -9,10 +9,7 @@ class AsyncConstructor {
         })
         this.embeds = [{
             "title": "Cloudstream Repositories",
-            "description": `
-			
-			🧩 Repositories:\n 
-      ${repos.join("\n\n")} \n\n`,
+            "description": `🧩 Repositories:\n ${repos.join("\n\n")} \n\n`,
 			
             "color": 1381909
         }]
