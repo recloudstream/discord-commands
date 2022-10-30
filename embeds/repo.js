@@ -4,7 +4,7 @@ class AsyncConstructor {
     return (async () => {
 	var arrayRepos = []
         var repos = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
-	for (repo in repos) {
+	for (var repo in repos) {
 	    var json = repos[repo]
 	    var name = (await axios.get(json.url ?? json)).data.name
 	    if(json.verified) return arrayRepos.push(" <:verified:1027693463573114903> " + name + " :\n[Install](" + json.url + ")")
@@ -12,8 +12,7 @@ class AsyncConstructor {
 	}
         this.embeds = [{
             "title": "Cloudstream Repositories",
-            "description": `${repos.join("\n\n")} \n\n`,
-			
+            "description": `${arrayRepos.join("\n\n")}\n`,
             "color": 1381909
         }]
         return this;
