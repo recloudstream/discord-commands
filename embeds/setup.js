@@ -5,7 +5,7 @@ module.exports = new function main()
   this.embeds = [{
       "title": "Cloudstream setup process",
       "description": `
-**Step 1:** Download and install the [pre-release](https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease.apk).
+**Step 1:** Download and install the [pre-release](https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk).
 **Step 2:** Install the [repositories](https://cloudstream.cf/repos).
 
 If you need more guides, go to <#1031508285393748008>. `,
