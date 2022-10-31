@@ -85,5 +85,8 @@ buttons shit
 
 Array of strings has iDs of people allowed to use it
 
+## messageUrl
+
+String of a message url to literally send the same message
 <br><br><br>
 Very good explanation thank u i know
