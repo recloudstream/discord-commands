@@ -14,16 +14,13 @@ class AsyncConstructor {
             "title": "Cloudstream Repositories",
             "description": `${arrayRepos.join("\n\n")}\n`,
             "color": 1381909
-		
-	
-	{
-
+	},
+        {
 	"title": "Don't install all the plugins from a repo without knowing.",
-     "color": 16711680,
-      "image": {
-        "url": "https://cdn.discordapp.com/attachments/1036209801803333632/1036609641636962334/unknown.png"	
-	}
-		       
+        "color": 16711680,
+        "image": {
+           "url": "https://cdn.discordapp.com/attachments/1036209801803333632/1036609641636962334/unknown.png"	
+	   }
         }]
         return this;
         })();
