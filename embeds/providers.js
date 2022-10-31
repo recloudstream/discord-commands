@@ -26,7 +26,6 @@ class AsyncConstructor {
 		})
 		})
         this.embeds = allEmbeds
-	this.onlyIDs = ["326466810150912000"]
         return this;
         })();
     }
