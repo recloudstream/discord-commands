@@ -87,6 +87,18 @@ Array of strings has iDs of people allowed to use it
 
 ## messageUrl
 
-String of a message url to literally send the same message
+String of a message url to literally send the same messaget
+
+
+
+Value       | Description | Type
+------      | ------ | -----
+content   | Message content | String
+embeds  | Message embeds ([use discohook to generate it as json](https://discohook.org)) (Max 10 embeds) | Array<[Embed Object](https://discordjs.guide/popular-topics/embeds.html#using-an-embed-object)>
+files         | File should be less than 8mb | Array<String>
+components | Buttons, Only redirect button will work | Array<[Button Object](https://discord.com/developers/docs/interactions/message-components#button-object)>
+onlyIDs | Whitelist IDs and blacklist every other ID, Not required | Array<String>
+messageUrl | Copys that messges values | String
+
 <br><br><br>
 Very good explanation thank u i know
