@@ -84,13 +84,15 @@ class AsyncConstructor {
                             "inline": false
                         })
                     var meta = issueToMeta(issue)
+                    if (!meta && issue.url) {
+                        meta = issueToMeta((await axios.get(issue.url)).data)
+                    }
                     if (!meta) {
-                        allList.push({
+                           allList.push({
                             "name": "error",
-                            "value": `no-meta`,
+                            "value": `${JSON.stringify(issue)}`,
                             "inline": false
                         })
-                        continue //meta = issueToMeta((await axios.get(issue.url)).data)
                     }
                         
                     if (meta.url) {
