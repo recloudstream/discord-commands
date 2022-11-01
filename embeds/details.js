@@ -1,6 +1,5 @@
 module.exports = new function main() {
   this.embeds = [{
-
     "description": "1. Don't put your issue in <#737724143570780260>\n2. Don't spam your issue. If anybody knows the solution, he will help you. Otherwise, wait for the devs' response.\n3. Post your issue at <#737725084881387652>",
     "color": 15000804
   },

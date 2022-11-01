@@ -1,5 +1,4 @@
 const axios = require("axios")
-
 // from https://github.com/danamag/stremio-addons-list/blob/main/lib/issueToMeta.js#L3
 const issueToMeta = issue => {
     const meta = {
@@ -66,9 +65,7 @@ const issueToMeta = issue => {
         return meta
     } else return false
 }
-
 const VALID_LABELS = ["http+streams", "live+tv", "metadata"]
-
 Array.prototype.pushUnique = function (item){
     if(this.indexOf(item) == -1) {
         this.push(item);
@@ -76,7 +73,6 @@ Array.prototype.pushUnique = function (item){
     }
     return false;
 }
-
 class AsyncConstructor {
     constructor(value) {
         return (async () => {
