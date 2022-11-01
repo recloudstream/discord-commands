@@ -2,30 +2,29 @@ const axios = require("axios")
 class AsyncConstructor {
 	constructor(value) {
 		return (async () => {
-			const chunk = (arr, size) => Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
-				arr.slice(i * size, i * size + size)
-			);
-			var allList = []
+			var allEmbeds = []
 			var repo_db = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
 			for (const repo in repo_db) {
-				var repoUrl = repo_db[repo].url ?? repo_db[repo]
-				var pluginsResponseUrls = (await axios.get(repoUrl)).data
-				for (const pluginUrl in pluginsResponseUrls.pluginLists) {
-					(await axios.get(pluginsResponseUrls.pluginLists[pluginUrl])).data
+				var repoPlugins = []
+				var RepoResponse = (await axios.get(repo_db[repo].url ?? repo_db[repo])).data
+				for (const pluginUrl in RepoResponse.pluginLists) {
+					(await axios.get(RepoResponse.pluginLists[pluginUrl])).data
 						.forEach(data => {
-							allList.push(data)
+							repoPlugins.push(data)
 						})
 				}
+				var repoEmbed = {
+					"title": RepoResponse.name,
+					"description": repoPlugins.map(it => `**${it.internalName.replace("Provider", "")}**`).join(", "),
+					"url": repo_db[repo].url ?? repo_db[repo],
+					"color": 7232090,
+					"footer": {
+					    "text": "Plugins in this repository: " + repoPlugins.length
+					}
+				};
+				allEmbeds.push(repoEmbed)
 			}
-			var allEmbeds = []
-			chunk(allList, 30).forEach(data => {
-				allEmbeds.push({
-					"description": data.map(it => `${it.internalName.replace("Provider", "")}`).join(", "),
-					"color": null
-				})
-			})
 			this.embeds = allEmbeds
-			this.onlyIDs = ["326466810150912000","295186738085756929", "777478477569196044"]
 			return this;
 		})();
 	}
