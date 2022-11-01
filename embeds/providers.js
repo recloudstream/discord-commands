@@ -1,6 +1,7 @@
 const axios = require("axios")
 class AsyncConstructor {
 	constructor(args) {
+		this.args = args
 		return (async (inputs) => {
 			var allEmbeds = []
 			var repo_db = []
@@ -31,7 +32,7 @@ class AsyncConstructor {
 			}
 			this.embeds = allEmbeds
 			return this;
-		})();
+		})(args);
 	}
 }
 module.exports = AsyncConstructor
