@@ -3,11 +3,11 @@ class AsyncConstructor {
 	constructor(value) {
 		return (async () => {
 			let data = (await axios.get("https://api.github.com/rate_limit"))?.data
-            var fields = data.resources.map(it => {return { // js grammar is bad 
-                name: it.resource,
-                value: `${it.remaining}/${it.limit} (reset @ <t:${it.reset}:R>)`,
-                inline: false
-            }})
+			var fields = Object.values(data.resources).map(it => {return { // js grammar is bad 
+				name: it.resource,
+				value: `${it.remaining}/${it.limit} (reset @ <t:${it.reset}:R>)`,
+				inline: false
+			}})
 			
 			this.embeds = [
 				{
