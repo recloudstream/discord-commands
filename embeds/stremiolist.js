@@ -76,9 +76,10 @@ class AsyncConstructor {
             var allList = []
             var issues = (await axios.get("https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open")).data
             for (const issue in issues) {
+                if (!issue) continue
                 var meta = issueToMeta(issue)
                 if (!meta)
-                    meta = issueToMeta(issue.url)
+                    meta = issueToMeta((await axios.get(issue.url)).data)
                 if (meta.url) {
                     allList.push({
                         "name": meta.name,
