@@ -15,7 +15,7 @@ class AsyncConstructor {
 				var tstamp = timestamp(time.getUTCFullYear(), time.getUTCMonth(), time.getUTCDate(), time.getUTCHours(), time.getUTCMinutes(), time.getUTCSeconds())
 				if (idx === 0) name = name + " **(Latest)**"
 				return {
-					"name": name + ` <t:${tstamp}:R>`,
+					"name": name + `\n <t:${tstamp}:R>`,
 					"value": `[${commit.sha.slice(0, 7) + ".apk"}](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(0, 7)}.apk)\n${commit.commit.message}`,
 					"inline": true
 				}
