@@ -104,7 +104,7 @@ class AsyncConstructor {
                     
                     if (meta.url) {
                         allList.push({
-                            "name": `${meta.proposedLabels.join(', ')}`,
+                            "name": `${meta.proposedLabels.join(', ')}` || meta.name,
                             "value": `[${meta.name}](${meta.url.replace(/\/manifest\.json$/gi, "")})`,
                             "inline": false
                         })
