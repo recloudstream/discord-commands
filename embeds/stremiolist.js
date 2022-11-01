@@ -74,13 +74,25 @@ class AsyncConstructor {
                 arr.slice(i * size, i * size + size)
             );
             var allList = []
-            var issues = (await axios.get("https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open")).data
+            var issues = (await axios.get("https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open&per_page=100&labels=http+streams")).data
             for (const issue in issues) {
                 try {
-                    if (!issue) continue
+                    if (!issue) 
+                        allList.push({
+                            "name": "error",
+                            "value": `empty-issue`,
+                            "inline": false
+                        })
                     var meta = issueToMeta(issue)
-                    if (!meta)
+                    if (!meta) {
+                        allList.push({
+                            "name": "error",
+                            "value": `no-meta`,
+                            "inline": false
+                        })
                         continue //meta = issueToMeta((await axios.get(issue.url)).data)
+                    }
+                        
                     if (meta.url) {
                         allList.push({
                             "name": meta.name,
