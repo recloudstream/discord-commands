@@ -9,5 +9,14 @@ module.exports = new function main()
 **Step 2:** Install the [repositories](https://cloudstream.cf/repos).
 
 If you need more guides, go to <#1031508285393748008>. `,
+    
+  },
+         {
+	"title": "Don't install all the plugins from a repo without knowing.",
+        "color": 16711680,
+        "image": {
+           "url": "https://cdn.discordapp.com/attachments/1036209801803333632/1036609641636962334/unknown.png"	
+	   }                  
+      
     }]
 }
