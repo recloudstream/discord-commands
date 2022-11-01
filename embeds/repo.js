@@ -2,7 +2,7 @@ const axios = require("axios")
 class AsyncConstructor {
     constructor(value) {
         return (async () => {
-            var arrayRepos = []
+            /*var arrayRepos = []
             var repos = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
             for (const repo in repos) {
                 var json = repos[repo]
@@ -21,7 +21,8 @@ class AsyncConstructor {
                 "image": {
                     "url": "https://cdn.discordapp.com/attachments/1036209801803333632/1036609641636962334/unknown.png"
                 }
-            }]
+            }]*/
+            this.messageUrl = "https://discord.com/channels/1003664099483336736/1036144578690031726/1037016139861073970"
             return this;
         })();
     }
