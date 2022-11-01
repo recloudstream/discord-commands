@@ -24,7 +24,11 @@ class AsyncConstructor {
 				}
 				var repoEmbed = {
 					"title": RepoResponse.name,
-					"description": repoPlugins.map(it => `**${it.internalName.replace("Provider", "")}**`).join(", "),
+					"description": repoPlugins.map(it => {
+						var status;
+						if(it.status == 1) status = "\\🟢"; else if(it.status == 2) status = "\\🟡"; else if(it.status == 3) status = "\\🟠"; else status = "\\🔴"
+						return `**${status} ${it.internalName.replace("Provider", "")}**`
+					}).join("\n"),
 					"url": repo_db[repo].url ?? repo_db[repo],
 					"color": 7232090,
 					"footer": {
