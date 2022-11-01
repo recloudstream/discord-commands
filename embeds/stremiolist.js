@@ -67,6 +67,8 @@ const issueToMeta = issue => {
     } else return false
 }
 
+const VALID_LABELS = ["http+streams", "live+tv"]
+
 class AsyncConstructor {
     constructor(value) {
         return (async () => {
@@ -74,31 +76,24 @@ class AsyncConstructor {
                 arr.slice(i * size, i * size + size)
             );
             var allList = []
-            var issues = (await axios.get("https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open&per_page=100&labels=http+streams")).data
+            var issues = []
+            for (const label of VALID_LABELS) {
+                issues.push(...(await axios.get(`https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open&per_page=100&labels=${label}`)).data)  
+            }
+            
             for (const issue of issues) {
                 try {
-                    if (!issue) 
-                        allList.push({
-                            "name": "error",
-                            "value": `empty-issue`,
-                            "inline": false
-                        })
+                    if (!issue) continue
                     var meta = issueToMeta(issue)
                     if (!meta && issue.url) {
                         meta = issueToMeta((await axios.get(issue.url)).data)
                     }
-                    if (!meta) {
-                           allList.push({
-                            "name": "error",
-                            "value": `${JSON.stringify(issue)}`,
-                            "inline": false
-                        })
-                    }
+                    if (!meta) continue
                         
                     if (meta.url) {
                         allList.push({
-                            "name": meta.name,
-                            "value": `\`${meta.url.replace(/\/manifest\.json$/gi, "")}\``,
+                            "name": `:thumbsup: ${meta.ups} :thumbsdown: ${meta.downs} ${meta.proposedLabels.join(', ')}`,
+                            "value": `\`[${meta.name}](${meta.url.replace(/\/manifest\.json$/gi, "")})\``,
                             "inline": false
                         })
                     }
@@ -111,7 +106,7 @@ class AsyncConstructor {
                 }
             }
             var allEmbeds = []
-            chunk(allList, 12).forEach(data => {
+            chunk(allList, 15).forEach(data => {
                 allEmbeds.push({
                     "title": "Stremio addons",
                     "fields": data,
