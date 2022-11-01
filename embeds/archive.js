@@ -12,10 +12,10 @@ class AsyncConstructor {
 			var fields = commits.filter(x => currentAvailableCommits.includes(`${x.sha.slice(0, 7)}.apk`)).map((commit, idx) => {
 				var name = commit.sha.slice(0, 7)
 				var time = new Date(commit.commit.author.date)
-				var timestamp = timestamp(time.getUTCFullYear(), time.getUTCMonth(), time.getUTCDate(), time.getUTCHours(), time.getUTCMinutes(), time.getUTCSeconds())
+				var tstamp = timestamp(time.getUTCFullYear(), time.getUTCMonth(), time.getUTCDate(), time.getUTCHours(), time.getUTCMinutes(), time.getUTCSeconds())
 				if (idx === 0) name = name + " **(Latest)**"
 				return {
-					"name": name + ` <t:${timestamp}:R>`,
+					"name": name + ` <t:${tstamp}:R>`,
 					"value": `[${commit.sha.slice(0, 7) + ".apk"}](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(0, 7)}.apk)\n${commit.commit.message}`,
 					"inline": true
 				}
