@@ -67,7 +67,7 @@ const issueToMeta = issue => {
     } else return false
 }
 
-const VALID_LABELS = ["http+streams", "live+tv"]
+const VALID_LABELS = ["http+streams", "live+tv", "metadata"]
 
 class AsyncConstructor {
     constructor(value) {
@@ -85,14 +85,14 @@ class AsyncConstructor {
                 try {
                     if (!issue) continue
                     var meta = issueToMeta(issue)
-                    if (!meta && issue.url) {
-                        meta = issueToMeta((await axios.get(issue.url)).data)
-                    }
+                    //if (!meta && issue.url) {
+                    //    meta = issueToMeta((await axios.get(issue.url)).data)
+                    //}
                     if (!meta) continue
                         
                     if (meta.url) {
                         allList.push({
-                            "name": `:thumbsup: ${meta.ups} :thumbsdown: ${meta.downs} ${meta.proposedLabels.join(', ')}`,
+                            "name": `${meta.proposedLabels.join(', ')} :thumbsup: ${meta.ups} :thumbsdown: ${meta.downs} :speaking_head: ${meta.commentCount}`,
                             "value": `[${meta.name}](${meta.url.replace(/\/manifest\.json$/gi, "")})`,
                             "inline": false
                         })
