@@ -4,7 +4,7 @@ class AsyncConstructor {
 		return (async () => {
 			var allEmbeds = []
 			var repo_db = [];
-			if (value && value.startsWith("https://") {
+			if (value && value.startsWith("https://")) {
 			    	var repo_db = [value]
 			} else {
 				var repo_db = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
