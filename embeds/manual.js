@@ -1,6 +1,7 @@
 
 
 {
+  this.files = ["https://cdn.discordapp.com/attachments/1008296541926199337/1036935177508757544/manual.mp4"]
   this.embeds = [{
       "title": "For manual install, copy/type the link in the repo box (`cs3 > Settings > Extensions > Add repository`)",
       "description": `
