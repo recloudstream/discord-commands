@@ -24,5 +24,3 @@ module.exports = new function main() {
     "color": null
   }]
 }
-
-

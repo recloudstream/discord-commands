@@ -11,7 +11,6 @@
 :small_blue_diamond: darkdemon: **drepo**
 :small_blue_diamond: LikDev:  **likrepo**
 :small_blue_diamond: nsfw: **nsfw**
-
       
       `,
   }]
