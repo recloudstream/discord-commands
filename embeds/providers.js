@@ -31,7 +31,7 @@ class AsyncConstructor {
 						if(it.status == 1) status = "\\🟢"; else if(it.status == 2) status = "\\🟡"; else if(it.status == 3) status = "\\🟠"; else status = "\\🔴"
 						return `**${status} ${it.internalName.replace("Provider", "")}**`
 					}).join("\n"),
-					"url": repo_db[repo].url ?? repo_db[repo],
+					"url": repo.url || repo,
 					"color": 7232090,
 					"footer": {
 						"text": "Plugins in this repository: " + repoPlugins.length
