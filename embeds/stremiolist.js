@@ -69,6 +69,14 @@ const issueToMeta = issue => {
 
 const VALID_LABELS = ["http+streams", "live+tv", "metadata"]
 
+Array.prototype.pushUnique = function (item){
+    if(this.indexOf(item) == -1) {
+        this.push(item);
+        return true;
+    }
+    return false;
+}
+
 class AsyncConstructor {
     constructor(value) {
         return (async () => {
@@ -85,15 +93,18 @@ class AsyncConstructor {
                 try {
                     if (!issue) continue
                     var meta = issueToMeta(issue)
-                    meta = issueToMeta((await axios.get(issue.url)).data)
                     //if (!meta && issue.url) {
                     //    meta = issueToMeta((await axios.get(issue.url)).data)
                     //}
                     if (!meta) continue
-                        
+                    
+                    for (const label in issue.labels) {
+                        meta.proposedLabels.pushUnique(label.name)
+                    }
+                    
                     if (meta.url) {
                         allList.push({
-                            "name": `${meta.proposedLabels.join(', ')} :thumbsup: ${meta.ups} :thumbsdown: ${meta.downs} :speaking_head: ${meta.commentCount}`,
+                            "name": `${meta.proposedLabels.join(', ')}`,
                             "value": `[${meta.name}](${meta.url.replace(/\/manifest\.json$/gi, "")})`,
                             "inline": false
                         })
