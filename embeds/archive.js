@@ -17,7 +17,7 @@ class AsyncConstructor {
 				return {
 					"name": name,
 					"value": `[${commit.sha.slice(0, 7) + ".apk"}](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(0, 7)}.apk)\n${commit.commit.message}\n**Update was <t:${tstamp}:R>**`,
-					"inline": true
+					"inline": false
 				}
 			})
 			this.embeds = [
