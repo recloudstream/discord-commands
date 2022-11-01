@@ -27,7 +27,7 @@ class AsyncConstructor {
             } catch(err) {
                 console.log(err.message)
                 console.log(repos)
-                this.messageUrl = "https://discord.com/channels/851215722171727893/851217659395571712/1037062674858643547"
+                this.messageUrl = "https://discord.com/channels/1003664099483336736/1036142141879091251/1037064790507540571"
                 return this
             }
         })();
