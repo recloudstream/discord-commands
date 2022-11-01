@@ -79,7 +79,7 @@ class AsyncConstructor {
                 if (!issue) continue
                 var meta = issueToMeta(issue)
                 if (!meta)
-                    meta = issueToMeta((await axios.get(issue.url)).data)
+                    continue //meta = issueToMeta((await axios.get(issue.url)).data)
                 if (meta.url) {
                     allList.push({
                         "name": meta.name,
