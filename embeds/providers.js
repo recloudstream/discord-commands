@@ -13,11 +13,13 @@ class AsyncConstructor {
 				repo_db = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
 			}
 			console.log(repo_db)
-			for (const repo in repo_db) {
+			for (const repo of repo_db) {
+				if (!repo) continue;
 				var repoPlugins = []
-				var RepoResponse = (await axios.get(repo_db[repo].url ?? repo_db[repo])).data
-				for (const pluginUrl in RepoResponse.pluginLists) {
-					(await axios.get(RepoResponse.pluginLists[pluginUrl])).data
+				var RepoResponse = (await axios.get(repo.url || repo)).data
+				for (const pluginUrl of RepoResponse.pluginLists) {
+					if (!pluginUrl || !pluginUrl.startsWith("http")) continue;
+					(await axios.get(pluginUrl)).data
 						.forEach(data => {
 							repoPlugins.push(data)
 						})
