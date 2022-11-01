@@ -76,18 +76,25 @@ class AsyncConstructor {
             var allList = []
             var issues = (await axios.get("https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open")).data
             for (const issue in issues) {
-                if (!issue) continue
-                var meta = issueToMeta(issue)
-                if (!meta)
-                    continue //meta = issueToMeta((await axios.get(issue.url)).data)
-                if (meta.url) {
-                    allList.push({
-                        "name": meta.name,
-                        "value": `\`${meta.url.replace(/\/manifest\.json$/gi, "")}\``,
-                        "inline": false
-                    })
+                try {
+                    if (!issue) continue
+                    var meta = issueToMeta(issue)
+                    if (!meta)
+                        continue //meta = issueToMeta((await axios.get(issue.url)).data)
+                    if (meta.url) {
+                        allList.push({
+                            "name": meta.name,
+                            "value": `\`${meta.url.replace(/\/manifest\.json$/gi, "")}\``,
+                            "inline": false
+                        })
+                    }
+                } catch (error) {
+                       allList.push({
+                            "name": "error",
+                            "value": `${error}`,
+                            "inline": false
+                        })
                 }
-
             }
             var allEmbeds = []
             chunk(allList, 12).forEach(data => {
