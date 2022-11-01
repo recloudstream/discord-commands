@@ -105,6 +105,7 @@ class AsyncConstructor {
                 })
             })
             this.embeds = allEmbeds
+            this.content = "You can install these by using the clone site feature."
             return this;
         })();
     }
