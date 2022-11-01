@@ -93,7 +93,7 @@ class AsyncConstructor {
                     if (meta.url) {
                         allList.push({
                             "name": `:thumbsup: ${meta.ups} :thumbsdown: ${meta.downs} ${meta.proposedLabels.join(', ')}`,
-                            "value": `\`[${meta.name}](${meta.url.replace(/\/manifest\.json$/gi, "")})\``,
+                            "value": `[${meta.name}](${meta.url.replace(/\/manifest\.json$/gi, "")})`,
                             "inline": false
                         })
                     }
@@ -114,7 +114,7 @@ class AsyncConstructor {
                 })
             })
             this.embeds = allEmbeds
-            this.content = `You can install these by using the clone site feature. (Issue count: ${issues.length})`
+            this.content = `You can install these by using the clone site feature.`
             return this;
         })();
     }
