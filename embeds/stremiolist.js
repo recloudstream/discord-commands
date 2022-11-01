@@ -75,7 +75,7 @@ class AsyncConstructor {
             );
             var allList = []
             var issues = (await axios.get("https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open&per_page=100&labels=http+streams")).data
-            for (const issue in issues) {
+            for (const issue of issues) {
                 try {
                     if (!issue) 
                         allList.push({
