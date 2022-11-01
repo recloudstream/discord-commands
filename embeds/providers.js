@@ -25,7 +25,7 @@ class AsyncConstructor {
 					"url": repo_db[repo].url ?? repo_db[repo],
 					"color": 7232090,
 					"footer": {
-					    "text": "Plugins in this repository: " + repoPlugins.length
+						"text": "Plugins in this repository: " + repoPlugins.length
 					}
 				};
 				allEmbeds.push(repoEmbed)
