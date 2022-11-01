@@ -1,4 +1,4 @@
-module.exports = new function main() {
+module.exports = function main() {
   this.embeds = [{
     "url": "https://github.com/recloudstream/cloudstream",
     "title": "Fix it yourself.",

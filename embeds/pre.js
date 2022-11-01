@@ -1,4 +1,4 @@
-module.exports = new function main() {
+module.exports = function main() {
   var downloadLink = "https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"
   this.embeds = [
     {

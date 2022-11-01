@@ -74,7 +74,7 @@ Array.prototype.pushUnique = function (item){
     return false;
 }
 class AsyncConstructor {
-    constructor(value) {
+    constructor(args) {
         return (async () => {
             const chunk = (arr, size) => Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
                 arr.slice(i * size, i * size + size)
@@ -127,4 +127,4 @@ class AsyncConstructor {
         })();
     }
 }
-module.exports = new AsyncConstructor()
+module.exports = AsyncConstructor

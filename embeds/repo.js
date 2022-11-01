@@ -1,6 +1,6 @@
 const axios = require("axios")
 class AsyncConstructor {
-    constructor(value) {
+    constructor(args) {
         return (async () => {
             try {
                 var arrayRepos = []
@@ -13,11 +13,7 @@ class AsyncConstructor {
                 }
                 this.embeds = [{
                     "title": "Cloudstream Repositories",
-                    "description": `${arrayRepos.join("\n\n")}\n`,
-                    "color": 1381909
-                },
-                {
-                    "title": "Don't install all the plugins from a repo without knowing.",
+                    "description": `${arrayRepos.join("\n\n")}\n\nDon't install all the plugins from a repo without knowing.`,
                     "color": 16711680,
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/1036209801803333632/1036609641636962334/unknown.png"
@@ -33,4 +29,4 @@ class AsyncConstructor {
         })();
     }
 }
-module.exports = new AsyncConstructor()
+module.exports = AsyncConstructor

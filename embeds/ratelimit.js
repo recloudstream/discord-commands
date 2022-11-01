@@ -1,6 +1,6 @@
 const axios = require("axios");
 class AsyncConstructor {
-	constructor(value) {
+	constructor(args) {
 		return (async () => {
 			let data = (await axios.get("https://api.github.com/rate_limit"))?.data
 			var fields = Object.values(data.resources).map(it => {return { // js grammar is bad 
@@ -20,4 +20,4 @@ class AsyncConstructor {
 		})();
 	}
 }
-module.exports = new AsyncConstructor()
+module.exports = AsyncConstructor

@@ -4,7 +4,7 @@ function timestamp(year, month, day, hour, minute, second){
  return datum.getTime()/1000
 }
 class AsyncConstructor {
-	constructor(value) {
+	constructor(args) {
 		return (async () => {
 			var data = (await axios.get("https://api.github.com/repos/recloudstream/cloudstream-archive/git/trees/master"))?.data?.tree || []
 			var currentAvailableCommits = data.filter(x => x.path.endsWith(".apk")).map(x => x.path)
@@ -32,4 +32,4 @@ class AsyncConstructor {
 		})();
 	}
 }
-module.exports = new AsyncConstructor()
+module.exports = AsyncConstructor

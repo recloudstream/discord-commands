@@ -1,4 +1,4 @@
-module.exports = new function main() {
+module.exports = function main() {
   this.embeds = [{
     "title": "It's a clone site",
     "description": "The site you have requested has one of these server combinations.",

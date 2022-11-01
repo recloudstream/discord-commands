@@ -1,4 +1,4 @@
-module.exports = new function main() {
+module.exports = function main() {
   this.embeds = [{
     "title": "The feature you have asked for is already in the app.",
     "color": 16711680,

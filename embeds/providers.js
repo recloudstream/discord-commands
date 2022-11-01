@@ -1,6 +1,6 @@
 const axios = require("axios")
 class AsyncConstructor {
-	constructor(value) {
+	constructor(args) {
 		return (async () => {
 			var allEmbeds = []
 			let repo_db = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
@@ -29,4 +29,4 @@ class AsyncConstructor {
 		})();
 	}
 }
-module.exports = new AsyncConstructor()
+module.exports = AsyncConstructor

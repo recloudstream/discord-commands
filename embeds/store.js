@@ -1,4 +1,4 @@
-module.exports = new function main() {
+module.exports = function main() {
   this.embeds = [{
     "title": "Cloudstream Beta - Miscrosoft Store Apps",
     "description": "Cloudstream is a windows app for streaming and downloading Movies, TV-Series, Asian dramas, Anime and IPTV. The app provides all the contents without any sign-up and subscription.\n\nFeatures include:\n- 4K movies\n- Anime tracking\n- Subtitle downloads\n- Chromecast support",

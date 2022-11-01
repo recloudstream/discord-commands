@@ -1,6 +1,6 @@
 const axios = require("axios")
 class AsyncConstructor {
-    constructor(value) {
+    constructor(args) {
         return (async () => {
             var repos = (await axios.get("https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json")).data
                 .map(json => {
@@ -16,4 +16,4 @@ class AsyncConstructor {
         })();
     }
 }
-module.exports = new AsyncConstructor()
+module.exports = AsyncConstructor

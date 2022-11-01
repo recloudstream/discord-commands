@@ -1,4 +1,4 @@
-module.exports = new function main() {
+module.exports = function main() {
   this.embeds = [{
     "title": "Movies & Series",
     "description": "1. Super stream [English](https://cs.repo/?raw.githubusercontent.com/recloudstream/cloudstream-extensions/builds/repo.json)\n2. Sora stream [Hexated](https://cs.repo/?raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/builds/repo.json)\n3. Loklok [Hexated](https://cs.repo/?raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/builds/repo.json)\n4. Ask4movies [English](https://cs.repo/?raw.githubusercontent.com/recloudstream/cloudstream-extensions/builds/repo.json)\n5. Olgply [English](https://cs.repo/?raw.githubusercontent.com/recloudstream/cloudstream-extensions/builds/repo.json)",

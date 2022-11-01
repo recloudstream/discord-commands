@@ -1,6 +1,6 @@
 const getFiles = require("../functions/getFiles.js")
 class AsyncConstructor {
-    constructor(value) {
+    constructor(args) {
         return (async () => {
             this.embeds = [{
                 "title": "Github Embeds",
@@ -25,4 +25,4 @@ class AsyncConstructor {
         })();
     }
 }
-module.exports = new AsyncConstructor()
+module.exports = AsyncConstructor

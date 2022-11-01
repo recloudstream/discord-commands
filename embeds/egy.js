@@ -1,4 +1,4 @@
-module.exports = new function main() {
+module.exports = function main() {
   this.embeds = [{
     "title": "Egybest is always broken. Use other sources.",
     "color": 16711680,
