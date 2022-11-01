@@ -16,7 +16,7 @@ class AsyncConstructor {
 				if (idx === 0) name = name + " **(Latest)**"
 				return {
 					"name": name,
-					"value": `[${commit.sha.slice(0, 7) + ".apk"}](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(0, 7)}.apk)\n${commit.commit.message}\nUpdate was <t:${tstamp}:R>`,
+					"value": `[${commit.sha.slice(0, 7) + ".apk"}](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(0, 7)}.apk)\n${commit.commit.message}\n**Update was <t:${tstamp}:R>**`,
 					"inline": true
 				}
 			})
