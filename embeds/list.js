@@ -1,4 +1,4 @@
-const getFiles = require("../functions/getFiles.js")
+const getFiles = require("../utils/getFiles.js")
 class AsyncConstructor {
     constructor(args) {
         return (async () => {
