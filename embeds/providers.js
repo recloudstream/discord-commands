@@ -30,7 +30,9 @@ class AsyncConstructor {
             repoPlugins.push(data);
           });
         }
-        var pluginsList = await Promise.all(
+        var pluginsList;
+        if (inputs?.length > 0 && inputs[0].startsWith("http")) {
+          pluginsList = await Promise.all(
           repoPlugins.map(async (it) => {
             var voteUrl =
               "https://api.countapi.xyz/get/cs3-votes/" + hash(it.url);
@@ -49,6 +51,13 @@ class AsyncConstructor {
             )} ( ${voteCount} )**`;
           })
         );
+        } else {
+          pluginsList = repoPlugins.map(it=> {
+						var status;
+						if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
+						return `**${status} ${it.internalName.replace("Provider", "")}**`
+					})
+        }
         var repoEmbed = {
           title: RepoResponse.name,
           description: pluginsList.join("\n"),
