@@ -11,11 +11,12 @@ class AsyncConstructor {
 		return (async (inputs) => {
 			var allEmbeds = [];
 			var repo_db = [];
-			if (inputs?.length > 0) {
-				if (inputs[0].startsWith("http")) {
-					repo_db = [inputs[0]];
-				} else if (inputs[0].includes(["eng", "multi", "arab", "hexa", "drepo", "likrepo", "nsfw"])) {
+			var allowedAlias = ["eng", "multi", "arab", "hexa", "drepo", "likrepo", "nsfw"]
+			if(inputs?.length > 0) {
+				if(allowedAlias.includes(inputs[0])) {
 					repo_db = [`https://l.cloudstream.cf/${inputs[0]}`];
+				} else if (inputs[0].startsWith("http")) {
+					repo_db = [inputs[0]];
 				}
 			} else {
 				repo_db = (
@@ -24,6 +25,7 @@ class AsyncConstructor {
 					)
 				).data;
 			}
+			console.log(repo_db)
 			for (const repo of repo_db) {
 				if (!repo) continue;
 				var repoPlugins = [];
@@ -35,7 +37,7 @@ class AsyncConstructor {
 					});
 				}
 				var pluginsList;
-				if (inputs?.length > 0 && inputs[0].startsWith("http")) {
+				if (inputs?.length > 0 && inputs[0].startsWith("http") || allowedAlias.includes(inputs[0])) {
 					pluginsList = await Promise.all(
 						repoPlugins.map(async (it) => {
 							var voteUrl =
@@ -78,4 +80,5 @@ class AsyncConstructor {
 		})(args);
 	}
 }
+
 module.exports = AsyncConstructor;
