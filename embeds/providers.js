@@ -14,14 +14,7 @@ class AsyncConstructor {
       if (inputs?.length > 0) {
 		if(inputs[0].startsWith("http")) {
 			repo_db = [inputs[0]];
-		} else {
-			if(![inputs[0]].includes(["eng", "multi", "arab", "hexa", "drepo", "likrepo", "nsfw"])) {
-				repo_db = (
-					await axios.get(
-					  "https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json"
-					)
-				  ).data;
-			}
+		} else if(inputs[0].includes(["eng", "multi", "arab", "hexa", "drepo", "likrepo", "nsfw"])) {
 			repo_db = "https://l.cloudstream.cf/" + [inputs[0]];
 		}
       } else {
