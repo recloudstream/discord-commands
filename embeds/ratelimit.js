@@ -16,7 +16,6 @@ class AsyncConstructor {
 					"fields": fields
 				}
 			]
-			this.onlyIDs = ["295186738085756929", "326466810150912000"]
 			return this;
 		})();
 	}
