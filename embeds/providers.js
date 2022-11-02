@@ -15,7 +15,7 @@ class AsyncConstructor {
 		if(inputs[0].startsWith("http")) {
 			repo_db = [inputs[0]];
 		} else if(inputs[0].includes(["eng", "multi", "arab", "hexa", "drepo", "likrepo", "nsfw"])) {
-			repo_db = "https://l.cloudstream.cf/" + inputs[0];
+			repo_db = ["https://l.cloudstream.cf/" + inputs[0]]
 		}
       } else {
         repo_db = (
