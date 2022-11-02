@@ -1,5 +1,4 @@
 module.exports = function main() {
-  console.log("PR")
   this.embeds = [{
     "title": "Pull request feature is free for all",
     "color": 16711680,
