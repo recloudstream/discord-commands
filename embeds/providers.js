@@ -27,12 +27,6 @@ class AsyncConstructor {
 				}
 				var pluginsList = []
 				if (inputs?.length > 0 && inputs[0].startsWith("http")) {
-					pluginsList = repoPlugins.map(it=> {
-						var status;
-						if (it.status == 1) status = "\\🟢"; else if (it.status == 2) status = "\\🟡"; else if (it.status == 3) status = "\\🟠"; else status = "\\🔴"
-						return `**${status} ${it.internalName.replace("Provider", "")}**`
-					})
-				} else {
 					for (const plugin in repoPlugins) {
 						try {
 							var it = repoPlugins[plugin]
@@ -48,6 +42,12 @@ class AsyncConstructor {
 							pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")}**`)
 						}
 					}
+				} else {
+					pluginsList = repoPlugins.map(it=> {
+						var status;
+						if (it.status == 1) status = "\\🟢"; else if (it.status == 2) status = "\\🟡"; else if (it.status == 3) status = "\\🟠"; else status = "\\🔴"
+						return `**${status} ${it.internalName.replace("Provider", "")}**`
+					})
 				}
 				var repoEmbed = {
 					"title": RepoResponse.name,
