@@ -67,9 +67,9 @@ class AsyncConstructor {
 				}
 				var desc;
 				if(pluginsList[0].vote == null) {
-					desc = pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `${index + 1}: ${value.status} ${value.name}`).join("\n")
+					desc = pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `**${value.status} ${value.name}**`).join("\n")
 				} else {
-					pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `${index + 1}: ${value.status} ${value.name} | ${(value.vote >= 0) ? value.vote + " <:upvote:1037335398759809094>" : value.vote + " <:downvote:1037335394787790908>"}`).join("\n")
+					desc = pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `**${value.status} ${value.name} | ${(value.vote >= 0) ? value.vote + " <:upvote:1037335398759809094>" : value.vote + " <:downvote:1037335394787790908>"}**`).join("\n")
 				}
 				var repoEmbed = {
 					title: RepoResponse.name,
