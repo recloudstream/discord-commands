@@ -1,4 +1,4 @@
-module.exports = new function main()
+module.exports = function main()
 
 {
   this.embeds = [{
