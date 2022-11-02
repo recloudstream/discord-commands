@@ -26,9 +26,15 @@ class AsyncConstructor {
 						})
 				}
 				var pluginsList = []
-				for (const plugin in repoPlugins) {
-					try {
-						if(repo_db = [inputs[0]]) {
+				if (inputs?.length > 0 && inputs[0].startsWith("http")) {
+					pluginsList = repoPlugins.map(it=> {
+						var status;
+						if (it.status == 1) status = "\\🟢"; else if (it.status == 2) status = "\\🟡"; else if (it.status == 3) status = "\\🟠"; else status = "\\🔴"
+						return `**${status} ${it.internalName.replace("Provider", "")}**`
+					})
+				} else {
+					for (const plugin in repoPlugins) {
+						try {
 							var it = repoPlugins[plugin]
 							var voteUrl = "https://api.countapi.xyz/get/cs3-votes/" + hash(it.url)
 							var voteCount = (await axios.get(voteUrl))?.data?.value;
@@ -36,15 +42,11 @@ class AsyncConstructor {
 							var status;
 							if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
 							pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")} ( ${voteCount} )**`)
-						} else {
+						} catch (err) {
 							var status;
 							if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
 							pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")}**`)
 						}
-					} catch (err) {
-						var status;
-						if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
-						pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")}**`)
 					}
 				}
 				var repoEmbed = {
