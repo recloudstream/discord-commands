@@ -25,7 +25,6 @@ class AsyncConstructor {
 					)
 				).data;
 			}
-			console.log(repo_db)
 			for (const repo of repo_db) {
 				if (!repo) continue;
 				var repoPlugins = [];
@@ -43,30 +42,38 @@ class AsyncConstructor {
 							var voteUrl =
 								"https://api.countapi.xyz/get/cs3-votes/" + hash(it.url);
 							var voteCount = (await axios.get(voteUrl))?.data?.value;
-							if (voteCount >= 0)
-								voteCount = voteCount + " <:upvote:1037335398759809094>";
-							else voteCount = voteCount + " <:downvote:1037335394787790908>";
 							var status;
 							if (it.status == 1) status = "🟢";
 							else if (it.status == 2) status = "🟡";
 							else if (it.status == 3) status = "🟠";
 							else status = "🔴";
-							return `**${status} ${it.internalName.replace(
-								"Provider",
-								""
-							)} ( ${voteCount} )**`;
+							return {
+								status: status,
+								name: it.internalName.replace("Provider",""),
+								vote: voteCount
+							}
 						})
 					);
 				} else {
 					pluginsList = repoPlugins.map(it => {
 						var status;
 						if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
-						return `**${status} ${it.internalName.replace("Provider", "")}**`
+						return {
+							status: status,
+							name: it.internalName.replace("Provider",""),
+							vote: null
+						}
 					})
+				}
+				var desc;
+				if(pluginsList[0].vote == null) {
+					desc = pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `${index + 1}: ${value.status} ${value.name}`).join("\n")
+				} else {
+					pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `${index + 1}: ${value.status} ${value.name} | ${(value.vote >= 0) ? value.vote + " <:upvote:1037335398759809094>" : value.vote + " <:downvote:1037335394787790908>"}`).join("\n")
 				}
 				var repoEmbed = {
 					title: RepoResponse.name,
-					description: pluginsList.join("\n"),
+					description: desc,
 					url: repo.url || repo,
 					color: 7232090,
 					footer: {
@@ -80,5 +87,4 @@ class AsyncConstructor {
 		})(args);
 	}
 }
-
 module.exports = AsyncConstructor;
