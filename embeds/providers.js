@@ -28,13 +28,19 @@ class AsyncConstructor {
 				var pluginsList = []
 				for (const plugin in repoPlugins) {
 					try {
-						var it = repoPlugins[plugin]
-						var voteUrl = "https://api.countapi.xyz/get/cs3-votes/" + hash(it.url)
-						var voteCount = (await axios.get(voteUrl))?.data?.value;
-						if (voteCount >= 0) voteCount = voteCount + " <:upvote:1037335398759809094>"; else voteCount = voteCount + " <:downvote:1037335394787790908>"
-						var status;
-						if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
-						pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")} ( ${voteCount} )**`)
+						if(repo_db = [inputs[0]]) {
+							var it = repoPlugins[plugin]
+							var voteUrl = "https://api.countapi.xyz/get/cs3-votes/" + hash(it.url)
+							var voteCount = (await axios.get(voteUrl))?.data?.value;
+							if (voteCount >= 0) voteCount = voteCount + " <:upvote:1037335398759809094>"; else voteCount = voteCount + " <:downvote:1037335394787790908>"
+							var status;
+							if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
+							pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")} ( ${voteCount} )**`)
+						} else {
+							var status;
+							if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
+							pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")}**`)
+						}
 					} catch (err) {
 						var status;
 						if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
