@@ -11,8 +11,19 @@ class AsyncConstructor {
     return (async (inputs) => {
       var allEmbeds = [];
       var repo_db = [];
-      if (inputs?.length > 0 && inputs[0].startsWith("http")) {
-        repo_db = [inputs[0]];
+      if (inputs?.length > 0) {
+		if(inputs[0].startsWith("http")) {
+			repo_db = [inputs[0]];
+		} else {
+			if(![inputs[0]].includes(["eng", "multi", "arab", "hexa", "drepo", "likrepo", "nsfw"])) {
+				repo_db = (
+					await axios.get(
+					  "https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json"
+					)
+				  ).data;
+			}
+			repo_db = "https://l.cloudstream.cf/" + [inputs[0]];
+		}
       } else {
         repo_db = (
           await axios.get(
