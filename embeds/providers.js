@@ -34,11 +34,11 @@ class AsyncConstructor {
 							var voteCount = (await axios.get(voteUrl))?.data?.value;
 							if (voteCount >= 0) voteCount = voteCount + " <:upvote:1037335398759809094>"; else voteCount = voteCount + " <:downvote:1037335394787790908>"
 							var status;
-							if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
+							if (it.status == 1) status = "\\🟢"; else if (it.status == 2) status = "\\🟡"; else if (it.status == 3) status = "\\🟠"; else status = "\\🔴"
 							pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")} ( ${voteCount} )**`)
 						} catch (err) {
 							var status;
-							if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
+							if (it.status == 1) status = "\\🟢"; else if (it.status == 2) status = "\\🟡"; else if (it.status == 3) status = "\\🟠"; else status = "\\🔴"
 							pluginsList.push(`**${status} ${it.internalName.replace("Provider", "")}**`)
 						}
 					}
