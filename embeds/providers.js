@@ -12,11 +12,17 @@ class AsyncConstructor {
 			var allEmbeds = [];
 			var repo_db = [];
 			var allowedAlias = ["eng", "multi", "arab", "hexa", "drepo", "likrepo", "nsfw"]
-			if(inputs?.length > 0) {
-				if(allowedAlias.includes(inputs[0])) {
+			if (inputs?.length > 0) {
+				if (allowedAlias.includes(inputs[0])) {
 					repo_db = [`https://l.cloudstream.cf/${inputs[0]}`];
 				} else if (inputs[0].startsWith("http")) {
 					repo_db = [inputs[0]];
+				} else {
+					repo_db = (
+						await axios.get(
+							"https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json"
+						)
+					).data;
 				}
 			} else {
 				repo_db = (
@@ -49,7 +55,7 @@ class AsyncConstructor {
 							else status = "🔴";
 							return {
 								status: status,
-								name: it.internalName.replace("Provider",""),
+								name: it.internalName.replace("Provider", ""),
 								vote: voteCount
 							}
 						})
@@ -60,16 +66,16 @@ class AsyncConstructor {
 						if (it.status == 1) status = "🟢"; else if (it.status == 2) status = "🟡"; else if (it.status == 3) status = "🟠"; else status = "🔴"
 						return {
 							status: status,
-							name: it.internalName.replace("Provider",""),
+							name: it.internalName.replace("Provider", ""),
 							vote: null
 						}
 					})
 				}
 				var desc;
-				if(pluginsList[0].vote == null) {
-					desc = pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `**${value.status} ${value.name}**`).join("\n")
+				if (pluginsList[0].vote == null) {
+					desc = pluginsList.sort(function (a, b) { return b.vote - a.vote }).map((value, index) => `**${value.status} ${value.name}**`).join("\n")
 				} else {
-					desc = pluginsList.sort(function(a, b){return b.vote-a.vote}).map((value, index)=> `**${value.status} ${value.name} | ${(value.vote >= 0) ? value.vote + " <:upvote:1037335398759809094>" : value.vote + " <:downvote:1037335394787790908>"}**`).join("\n")
+					desc = pluginsList.sort(function (a, b) { return b.vote - a.vote }).map((value, index) => `**${value.status} ${value.name} | ${(value.vote >= 0) ? value.vote + " <:upvote:1037335398759809094>" : value.vote + " <:downvote:1037335394787790908>"}**`).join("\n")
 				}
 				var repoEmbed = {
 					title: RepoResponse.name,
