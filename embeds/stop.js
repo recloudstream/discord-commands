@@ -4,6 +4,7 @@ module.exports = function main() {
       "color": 16711680,
       "author": {
         "name": "Blue",
+        "url": "https://discord.com/users/476316493143867403",
         "icon_url": "https://cdn.discordapp.com/avatars/476316493143867403/e2c697b3de3baac74c865f4126f84ac6.png?size=1024"
       }
   }]
