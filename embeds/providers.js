@@ -89,7 +89,7 @@ class AsyncConstructor {
 				allEmbeds.push(repoEmbed);
 			}
 			this.embeds = allEmbeds;
-			this.allowedChannels = ["737729263221997619", "295186738085756929"]
+			this.allowedChannels = ["737729263221997619"]
 			return this;
 		})(args);
 	}
