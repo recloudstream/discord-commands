@@ -1,6 +1,6 @@
 module.exports = function main() {
   this.embeds = [{
-    "title": "Troublshooting",
+    "title": "Troubleshooting",
     "description": "You can read this page to get the idea how to fix your posted issue.",
     "url": "https://rentry.org/cs3fix",
     "color": 16711680,
