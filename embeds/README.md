@@ -1,7 +1,7 @@
 
 # Embeds Extensions
 ```js
-module.exports = new function main() {
+module.exports = function main() {
   this.content = "Hello"
   this.files = ["https://image.png", "https://video.mp4"]
   this.components = [
