@@ -5,7 +5,7 @@ module.exports = function main() {
     "url": "https://rentry.org/opensub",
     "color": 16711680,
     "thumbnail": {
-      "url": "https://cdn.discordapp.com/attachments/1016716040648015972/1036940396317638757/l9_1.png"
+      "url": "https://cdn.discordapp.com/attachments/1008654622740729897/1040172066348990526/os.png"
     }
   }]
 }
