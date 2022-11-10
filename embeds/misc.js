@@ -24,7 +24,7 @@ module.exports = function main() {
       "url": "https://play.google.com/store/apps/details?id=com.instantbits.cast.webvideo",
       "color": 14644241,
       "thumbnail": {
-        "url": "https://is4-ssl.mzstatic.com/image/thumb/Purple112/v4/ad/1d/f1/ad1df1a7-870b-af66-d5c9-edf7423208bc/AppIcon-0-1x_U007emarketing-0-10-0-85-220.png/230x0w.webp"
+        "url": "https://www.webvideocaster.com/assetsWVC/wvc_icon.png"
       }
     }
   ]
