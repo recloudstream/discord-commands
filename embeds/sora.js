@@ -1,5 +1,6 @@
 module.exports = function main() {
-    "title": "Sorastream",
+  this.embeds = [{
+  "title": "Sorastream",
       "description": "Sorastream is a MultiAPI based source that scrapes **A LOT** of sites and uses tmdb for catalogue.",
       "color": 11485,
       "thumbnail": {
