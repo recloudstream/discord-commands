@@ -11,7 +11,7 @@ class AsyncConstructor {
                     let data = (await axios.post(url, "prompt="+encodeURIComponent(prompt).replace(/%20/g, "+"))).data
                     let $ = cheerio.load(data)
                     let img = $('.content img').first().attr('src')
-                    this.content = img || "Couldn't generate the image <:cri:906496612749168661>. Please wait like a few seconds."
+                    this.content = img || "Couldn't generate the image <:pain:852619193387581490>. Please wait like a few seconds."
 		}
                 this.allowedChannels = ["737729263221997619"]
                 return this
