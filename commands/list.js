@@ -4,7 +4,7 @@ class AsyncConstructor {
         return (async () => {
             this.embeds = [{
                 "title": "Embeds",
-                "description": (await getFiles("embeds")).map(json => "." + json.name.replace(".js", "")).join("\n"),
+                "description": (await getFiles("commands")).map(json => "." + json.name.replace(".js", "")).join("\n"),
                 "color": 3407616
             }]
             this.components = [
