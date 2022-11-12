@@ -9,6 +9,11 @@ module.exports = function main() {
                 "min_values": 1,
                 "options": [
                   {
+                    "label": "Links",
+                    "emoji": "💠",
+                    "value": "https://discord.com/channels/737724143126052974/1031508285393748008/1036346889467076638"
+                  },
+                  {
                     "label": "Features",
                     "emoji": "💠",
                     "value": "https://discord.com/channels/737724143126052974/1031508285393748008/1040671780488085504"
