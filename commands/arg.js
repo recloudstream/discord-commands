@@ -7,30 +7,29 @@ class AsyncConstructor {
 			if (!attachment?.url) return this;
 			var data = (await axios.get("https://api.trace.moe/search?url=" + attachment?.url)).data
 			this.content = ""
-			this.embeds = data.result?.map(json => {
-				return {
-					"title": "Anilist",
-					"description": json.filename,
-					"url": `https://anilist.co/anime/${json.anilist}`,
-					"color": null,
-					"fields": [
-						{
-							"name": "Episode",
-							"value": json.episode ?? "Unknown",
-							"inline": true
-						},
-						{
-							"name": "From/To",
-							"value": `${json.from}/${json.to}`,
-							"inline": true
-						}
-					],
-					"image": {
-					  "url": json.image
+			var firstResult = data?.result[0]
+			this.embeds = [{
+				"title": "Anilist",
+				"description": firstResult.filename,
+				"url": `https://anilist.co/anime/${firstResult.anilist}`,
+				"color": null,
+				"fields": [
+					{
+						"name": "Episode",
+						"value": firstResult.episode ?? "Unknown",
+						"inline": true
+					},
+					{
+						"name": "From/To",
+						"value": `${firstResult.from}/${firstResult.to}`,
+						"inline": true
 					}
+				],
+				"image": {
+				  "url": firstResult.image
 				}
-			})
-			message.channel.send({files: [data?.result[0].video]})
+			}]
+			message.channel.send({files: [firstResult.video]})
 			return this;
 		})(args);
 	}
