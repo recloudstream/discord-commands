@@ -24,7 +24,10 @@ class AsyncConstructor {
 							"value": `${json.from}/${json.to}`,
 							"inline": true
 						}
-					]
+					],
+					"image": {
+					  "url": json.image
+					}
 				}
 			})]
 			message.channel.send({files: [data?.result[0].video]})
