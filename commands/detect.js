@@ -29,7 +29,7 @@ class AsyncConstructor {
 				  "url": firstResult.image
 				}
 			}]
-			message.channel.send({files: [firstResult.video]})
+			this.files = [firstResult.video]
 			return this;
 		})(args);
 	}
