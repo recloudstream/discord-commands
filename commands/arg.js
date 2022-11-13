@@ -7,7 +7,7 @@ class AsyncConstructor {
 			if (!attachment?.url) return this;
 			var data = (await axios.get("https://api.trace.moe/search?url=" + attachment?.url)).data
 			this.content = ""
-			this.embed = [data?.result?.map(json => {
+			this.embed = [data.result?.map(json => {
 				return {
 					"title": "Anilist",
 					"description": json.filename,
@@ -21,7 +21,8 @@ class AsyncConstructor {
 						},
 						{
 							"name": "From/To",
-							"value": `${json.from}/${json.to}`
+							"value": `${json.from}/${json.to}`,
+							"inline": true
 						}
 					]
 				}
