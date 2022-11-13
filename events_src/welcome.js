@@ -1,6 +1,7 @@
 const sendDm = require("./src/utils/sendDm.js")
 
 module.exports = function main(member){
+    try {
     sendDm(member, {
       embeds: [{
         "title": "Welcome to the Lagrapps server!",
@@ -27,4 +28,7 @@ module.exports = function main(member){
       "description": "If you need more guides, go to <#1031508285393748008>.",
       "color": 16711680
     }]
+    } catch (ex) {
+        console.error(ex)   
+    }
 }
