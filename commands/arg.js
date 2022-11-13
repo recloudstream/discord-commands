@@ -3,7 +3,7 @@ class AsyncConstructor {
 		this.args = args
 		return (async (inputs) => {
 			this.content = "Hello " + inputs.join(", ")
-			return this;
+			return this};
 		})(args);
 	}
 }
