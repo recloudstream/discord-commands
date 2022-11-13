@@ -3,12 +3,14 @@ const sendDm = require("./src/utils/sendDm.js")
 module.exports = function main(member){
     try {
     sendDm(member, {
-      embeds: [{
+      content: "",
+      embeds: [{  
         "title": "Welcome to the Lagrapps server!",
         "color": 16711680
       }]
     })
     sendDm(member, {
+      content: "",
       files: ["https://cdn.discordapp.com/attachments/1008207706143871067/1030755127189065748/cs3start.mp4"],
       embeds: [{
         "title": "Cloudstream setup process",
@@ -17,6 +19,7 @@ module.exports = function main(member){
       }]
     })
     sendDm(member, {
+      content: "",
       files: ["https://cdn.discordapp.com/attachments/1008296541926199337/1036935177508757544/manual.mp4"],
       embeds: [{
         "title": "If direct repo install doesn't work",
