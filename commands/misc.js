@@ -10,22 +10,22 @@ module.exports = function main() {
                 "options": [
                   {
                     "label": "mpv-android",
-                    "emoji": "💠",
+                    "emoji": "<:mpvlite:1041423456723538072>",
                     "value": "misc.js|0"
                   },
                   {
                     "label": "Download Navi",
-                    "emoji": "💠",
+                    "emoji": "<:navi:041422890832232568>",
                     "value": "misc.js|1"
                   },
                   {
                     "label": "Web Video Caster",
-                    "emoji": "💠",
+                    "emoji": "<:wvc:041422866031312977>",
                     "value": "misc.js|2"
                   },
                   {
                     "label": "GetSub - Subtitles Downloader",
-                    "emoji": "💠",
+                    "emoji": "<:sub:041422843088470036>",
                     "value": "misc.js|3"
                   }
                 ],
