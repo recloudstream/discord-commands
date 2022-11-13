@@ -35,5 +35,6 @@ module.exports = function main() {
       "thumbnail": {
         "url": "https://play-lh.googleusercontent.com/Jk4zs3DdW3tGaQ-s8-xYIvqRFK-HH7D7Fm_ylMY2ScmnERI70PVQwt1GyRHstjetnw=w240-h480-rw"
       }
+    }
   ]
 }
