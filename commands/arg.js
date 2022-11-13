@@ -1,8 +1,7 @@
 class AsyncConstructor {
-	constructor(args) {
-		this.args = args
-		return (async (inputs) => {
-			this.content = "Hello " + inputs.join(", ")
+	constructor(args, message) {
+		return (async () => {
+			this.content = "File: " + message..attachments[0].proxyURL ?? "None"
 			return this;
 		})(args);
 	}
