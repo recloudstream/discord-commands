@@ -15,7 +15,7 @@ module.exports = function main(member){
         "color": 16711680
       }],
       ["https://cdn.discordapp.com/attachments/1008207706143871067/1030755127189065748/cs3start.mp4"]
-    })
+    )
     sendDm(member, "",
       [{
         "title": "If direct repo install doesn't work",
@@ -23,7 +23,7 @@ module.exports = function main(member){
         "color": 16711680,
       }],
       ["https://cdn.discordapp.com/attachments/1008296541926199337/1036935177508757544/manual.mp4"]
-    })
+    )
     this.embeds = [{
       "description": "If you need more guides, go to <#1031508285393748008>.",
       "color": 16711680
