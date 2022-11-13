@@ -16,7 +16,7 @@ class AsyncConstructor {
 					"fields": [
 						{
 							"name": "Episode",
-							"value": json.episode,
+							"value": json.episode ?? "Unknown",
 							"inline": true
 						},
 						{
