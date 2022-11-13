@@ -13,7 +13,7 @@ class AsyncConstructor {
 			this.content = ""
 			this.embeds = [{
 				"title": result.anilist?.title?.english ?? "Unknown",
-				"description": result.filename,
+				"description": result.filename ?? "",
 				"url": `https://anilist.co/anime/${result.anilist.id}`,
 				"color": null,
 				"fields": [
@@ -24,12 +24,12 @@ class AsyncConstructor {
 					},
 					{
 						"name": "Synonyms",
-						"value": `${result.anilist.synonyms.join(", ")}`,
+						"value": `${result.anilist.synonyms?.join(", ")  ?? "Unknown"}`,
 						"inline": true
 					},
 					{
 						"name": "From/To",
-						"value": `${result.from}/${result.to}`,
+						"value": `${result.from ?? "Unknown"}/${result.to ?? "Unknown"}`,
 						"inline": true
 					}
 
