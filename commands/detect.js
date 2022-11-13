@@ -5,31 +5,43 @@ class AsyncConstructor {
 			this.content = "No image.";
 			var attachment = message.attachments.first()
 			if (!attachment?.url) return this;
-			var data = (await axios.get("https://api.trace.moe/search?url=" + attachment?.url)).data
+			var data = (await axios.get("https://api.trace.moe/search?anilistInfo&url=" + attachment?.url)).data
 			this.content = ""
-			var firstResult = data?.result[0]
+			var result = data?.result[0]
+			if(result.anilist.isAdult == true) result = data?.result[1]
+			if(result.anilist.isAdult == true) result = data?.result[2]
+			if(result.anilist.isAdult == true) result = data?.result[3]
+			this.content = "Woah, found nsfw stuff."
+			if(result.anilist.isAdult == true) return this
+			this.content = ""
 			this.embeds = [{
-				"title": "Anilist",
-				"description": firstResult.filename,
-				"url": `https://anilist.co/anime/${firstResult.anilist}`,
+				"title": result.anilist?.title?.english ?? "Unknown",
+				"description": result.filename,
+				"url": `https://anilist.co/anime/${result.anilist.id}`,
 				"color": null,
 				"fields": [
 					{
 						"name": "Episode",
-						"value": firstResult.episode ?? "Unknown",
+						"value": result.episode ?? "Unknown",
+						"inline": true
+					},
+					{
+						"name": "Synonyms",
+						"value": `${result.anilist.synonyms.join(", ")}`,
 						"inline": true
 					},
 					{
 						"name": "From/To",
-						"value": `${firstResult.from}/${firstResult.to}`,
+						"value": `${result.from}/${result.to}`,
 						"inline": true
 					}
+
 				],
 				"image": {
-				  "url": firstResult.image
+				  "url": result.image
 				}
 			}]
-			this.files = [firstResult.video]
+			this.files = [result.video]
 			return this;
 		})(args);
 	}
