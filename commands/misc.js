@@ -26,6 +26,14 @@ module.exports = function main() {
       "thumbnail": {
         "url": "https://www.webvideocaster.com/assetsWVC/wvc_icon.png"
       }
-    }
+    },
+    {
+      "title": "GetSub - Subtitles Downloader",
+      "description": "An ad-free [**subscene**](https://subscene.com/) client. Find the right subtitles for all of your movies and shows as soon as possible. A simple design, autocomplete search suggestions and easy download let you just start watching.",
+      "url": "https://play.google.com/store/apps/details?id=ir.getsub",
+      "color": 29680,
+      "thumbnail": {
+        "url": "https://play-lh.googleusercontent.com/Jk4zs3DdW3tGaQ-s8-xYIvqRFK-HH7D7Fm_ylMY2ScmnERI70PVQwt1GyRHstjetnw=w240-h480-rw"
+      }
   ]
 }
