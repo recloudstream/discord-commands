@@ -4,7 +4,7 @@ module.exports = function main() {
     {
         "components": [
             {
-                "custom_id": "help_select",
+                "custom_id": "select_commands",
                 "max_values": 1,
                 "min_values": 1,
                 "options": [
