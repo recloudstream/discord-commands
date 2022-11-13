@@ -39,6 +39,7 @@ class AsyncConstructor {
 				}
 			}]
 			this.files = [result.video]
+                        this.allowedChannels = ["737729263221997619"]
 			return this;
 		})(args);
 	}
