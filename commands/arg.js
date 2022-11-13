@@ -7,7 +7,7 @@ class AsyncConstructor {
 			if (!attachment?.url) return this;
 			var data = (await axios.get("https://api.trace.moe/search?url=" + attachment?.url)).data
 			this.content = ""
-			this.embeds = [data.result?.map(json => {
+			this.embeds = data.result?.map(json => {
 				return {
 					"title": "Anilist",
 					"description": json.filename,
@@ -29,7 +29,7 @@ class AsyncConstructor {
 					  "url": json.image
 					}
 				}
-			})]
+			})
 			message.channel.send({files: [data?.result[0].video]})
 			return this;
 		})(args);
