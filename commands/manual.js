@@ -6,6 +6,6 @@ module.exports = function main() {
       "color": 16711680,
       //"image": {
         //"url": "https://media.discordapp.net/attachments/1035987415082467338/1041034186552774776/manual.gif"
-      }
+      //}
   }]
 }
