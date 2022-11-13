@@ -11,32 +11,32 @@ module.exports = function main() {
                   {
                     "label": "mpv-android",
                     "emoji": {
-                      name: 'Man',
-                      id: '851215881924903013',
+                      name: 'mpvlite',
+                      id: '1041423456723538072',
                     },
                     "value": "misc.js|0"
                   },
                   {
                     "label": "Download Navi",
                     "emoji": {
-                      name: 'Man',
-                      id: '851215881924903013',
+                      name: 'navi',
+                      id: '1041422890832232568',
                     },
                     "value": "misc.js|1"
                   },
                   {
                     "label": "Web Video Caster",
                     "emoji": {
-                      name: 'Man',
-                      id: '851215881924903013',
+                      name: 'wvc',
+                      id: '1041422866031312977',
                     },
                     "value": "misc.js|2"
                   },
                   {
                     "label": "GetSub - Subtitles Downloader",
                     "emoji": {
-                      name: 'Man',
-                      id: '851215881924903013',
+                      name: 'sub',
+                      id: '1041422843088470036',
                     },
                     "value": "misc.js|3"
                   }
