@@ -7,7 +7,8 @@ module.exports = function main() {
       "color": 1083392,
       "thumbnail": {
         "url": "https://cdn.discordapp.com/attachments/1008654622740729897/1039955155099078726/wsa.png"
-      },
+      }
+  },
     {
     "title": "You must \"Always Allow\" this! Otherwise, you'll have to do the whole process again.",
       "color": 16711680,
