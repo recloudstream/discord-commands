@@ -18,11 +18,11 @@ module.exports = function main() {
                   },
                   {
                     "label": "Asian",
-                    "value": "misc.js|2"
+                    "value": "rec.js|2"
                   },
                   {
                     "label": "TV & Sports",
-                    "value": "misc.js|3"
+                    "value": "rec.js|3"
                   }
                 ],
                 "placeholder": "Click to select",
