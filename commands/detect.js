@@ -23,11 +23,6 @@ class AsyncConstructor {
 						"inline": true
 					},
 					{
-						"name": "Synonyms",
-						"value": `${result.anilist.synonyms?.join(", ")  ?? "Unknown"}`,
-						"inline": true
-					},
-					{
 						"name": "From/To",
 						"value": `${result.from ?? "Unknown"}/${result.to ?? "Unknown"}`,
 						"inline": true
@@ -39,7 +34,7 @@ class AsyncConstructor {
 				}
 			}]
 			this.files = [result.video]
-                        this.allowedChannels = ["737729263221997619"]
+                        this.allowedChannels = ["737729263221997619", "851217659395571712"]
 			return this;
 		})(args);
 	}
