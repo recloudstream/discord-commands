@@ -1,5 +1,5 @@
 
-# Embeds Extensions
+# Extensions
 ```js
 module.exports = function main() {
   this.content = "Hello"
