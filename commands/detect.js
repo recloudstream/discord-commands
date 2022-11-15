@@ -31,7 +31,10 @@ class AsyncConstructor {
 				],
 				"image": {
 				  "url": result.image
-				}
+				},
+				"footer": {
+				  "text": `This is ${Math.round(result.similarity * 100)}% similar to the image`
+			      }
 			}]
 			this.files = [result.video]
                         this.allowedChannels = ["737729263221997619", "851217659395571712"]
