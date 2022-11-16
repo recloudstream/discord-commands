@@ -3,6 +3,7 @@ const { TicTacToe } = require('discord-gamecord'); class AsyncConstructor {
     return (async () => {
       this.content = "Mention someone."
       if(!message.mentions.users.first()) return this;
+      this.content = null
       const Game = new TicTacToe({
         message: message,
         isSlashGame: false,
