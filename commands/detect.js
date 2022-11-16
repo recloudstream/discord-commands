@@ -8,6 +8,8 @@ class AsyncConstructor {
 			var data = (await axios.get("https://api.trace.moe/search?anilistInfo&url=" + attachment?.url)).data
 			this.content = ""
 			var result = data?.result[0]
+			this.content = "Oops something went wrong."
+			if(!result) return this
 			this.content = "Woah, found nsfw stuff."
 			if(result.anilist.isAdult == true) return this
 			this.content = ""
