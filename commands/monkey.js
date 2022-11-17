@@ -25,6 +25,7 @@ class AsyncConstructor {
         playerOnlyMessage: 'Only {player} can use these buttons.'
       });
       Game.startGame();
+      this.noMessage = true
       this.allowedChannels = ["737729263221997619", "851217659395571712"]
       return this;
     })(args);
