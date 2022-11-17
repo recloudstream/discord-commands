@@ -1,8 +1,11 @@
 const { TicTacToe } = require('discord-gamecord'); class AsyncConstructor {
   constructor(args, message) {
     return (async () => {
+      this.allowedChannels = ["737729263221997619", "851217659395571712"]
+      if(!["851217659395571712", "737729263221997619"].includes(message.channel.id)) return this;
       this.content = "Mention someone."
       if(!message.mentions.users.first()) return this;
+      this.noMessage = true
       this.content = null
       const Game = new TicTacToe({
         message: message,
@@ -29,7 +32,6 @@ const { TicTacToe } = require('discord-gamecord'); class AsyncConstructor {
         playerOnlyMessage: 'Only {player} and {opponent} can use these buttons.'
       });
       Game.startGame();
-      this.allowedChannels = ["737729263221997619", "851217659395571712"]
       return this;
     })(args);
   }
