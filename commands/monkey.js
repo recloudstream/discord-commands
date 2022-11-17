@@ -2,7 +2,6 @@ const { Snake } = require('discord-gamecord');
 class AsyncConstructor {
   constructor(args, message) {
     return (async () => {
-      this.noMessage = true
       this.allowedChannels = ["737729263221997619", "851217659395571712"]
       if(!["851217659395571712", "737729263221997619"].includes(message.channel.id)) return this;
       const Game = new Snake({
@@ -28,6 +27,7 @@ class AsyncConstructor {
         playerOnlyMessage: 'Only {player} can use these buttons.'
       });
       Game.startGame();
+      this.noMessage = true
       return this;
     })(args);
   }
