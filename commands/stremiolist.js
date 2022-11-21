@@ -123,6 +123,7 @@ class AsyncConstructor {
             })
             this.embeds = allEmbeds
             this.content = `You can install these by using the clone site feature.`
+            this.allowedChannels = ["737729263221997619", "851217659395571712"]
             return this;
         })();
     }
