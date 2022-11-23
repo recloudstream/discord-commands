@@ -33,7 +33,7 @@ class AsyncConstructor {
                 },
                 {
                     name: "Stormunblessed",
-                    url: "https://l.cloudstream.cf/strom",
+                    url: "https://l.cloudstream.cf/storm",
                 }
             ]
             if (inputs?.length > 0 && inputs[0].startsWith("http")) {
