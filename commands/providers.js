@@ -6,13 +6,13 @@ class AsyncConstructor {
                 {
                     name: "English",
                     url: "https://l.cloudstream.cf/eng",
-                    emoji: "🇬🇧",
+                    emoji: "",
                     shortcut: "eng"
                 },
                 {
                     name: "Multi",
                     url: "https://l.cloudstream.cf/multi",
-                    emoji: "🌏",
+                    emoji: "",
                     shortcut: "multi"
                 },
                 {
@@ -24,31 +24,31 @@ class AsyncConstructor {
                 {
                     name: "Hexated",
                     url: "https://l.cloudstream.cf/hexa",
-                    emoji: "🌏",
+                    emoji: "",
                     shortcut: "hexa"
                 },
                 {
                     name: "DarkDemon",
                     url: "https://l.cloudstream.cf/drepo",
-                    emoji: "🇮🇳",
+                    emoji: "",
                     shortcut: "drepo"
                 },
                 {
                     name: "LikeDev",
                     url: "https://l.cloudstream.cf/likrepo",
-                    emoji: "🇮🇳",
+                    emoji: "",
                     shortcut: "likrepo"
                 },
                 {
                     name: "NSFW",
                     url: "https://l.cloudstream.cf/nsfw",
-                    emoji: "🔞",
+                    emoji: "",
                     shortcut: "nsfw"
                 },
                 {
                     name: "Stormunblessed",
                     url: "https://l.cloudstream.cf/storm",
-                    emoji: "🇪🇸",
+                    emoji: "",
                     shortcut: "storm"
                 }
             ]
