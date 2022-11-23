@@ -1,8 +1,58 @@
 module.exports = function main() {
+  var repos = [
+    {
+        name: "English",
+        url: "https://l.cloudstream.cf/dir_eng",
+        emoji: "🇬🇧",
+        shortcut: "eng"
+    },
+    {
+        name: "Multi",
+        url: "https://l.cloudstream.cf/dir_multi",
+        emoji: "🌏",
+        shortcut: "multi"
+    },
+    {
+        name: "Arabic",
+        url: "https://l.cloudstream.cf/dir_arab",
+        emoji: "🇯🇴",
+        shortcut: "arab"
+    },
+    {
+        name: "Hexated",
+        url: "https://l.cloudstream.cf/dir_hexa",
+        emoji: "🌏",
+        shortcut: "hexa"
+    },
+    {
+        name: "DarkDemon",
+        url: "https://l.cloudstream.cf/dir_drepo",
+        emoji: "🇮🇳",
+        shortcut: "drepo"
+    },
+    {
+        name: "LikeDev",
+        url: "https://l.cloudstream.cf/dir_likrepo",
+        emoji: "🇮🇳",
+        shortcut: "likrepo"
+    },
+    {
+        name: "NSFW",
+        url: "https://l.cloudstream.cf/dir_nsfw",
+        emoji: "🔞",
+        shortcut: "nsfw"
+    },
+    {
+        name: "Stormunblessed",
+        url: "https://l.cloudstream.cf/dir_storm",
+        emoji: "🇪🇸",
+        shortcut: "storm"
+    }
+  ]
+  // :flag_gb: **English**: [Install](https://l.cloudstream.cf/dir_eng)\n\n
   this.embeds = [{
-
     "title": "Cloudstream Repositories",
-    "description": ":flag_gb: **English**: [Install](https://l.cloudstream.cf/dir_eng)\n\n:earth_asia: **Multilingual**: [Install](https://l.cloudstream.cf/dir_multi)\n\n:earth_asia: **Hexated**: [Install](https://l.cloudstream.cf/dir_hexa)\n\n:flag_ae: **Arabic**: [Install](https://l.cloudstream.cf/dir_arab)\n\n:underage: **NSFW**: [Install](https://l.cloudstream.cf/dir_nsfw)\n\n:flag_in: **Darkdemon**: [Install](https://l.cloudstream.cf/dir_drepo)\n\n:flag_in:** LikDev-256**: [Install](https://l.cloudstream.cf/dir_likrepo)\n\n:flag_ea: **Stormunblessed**: [Install](https://l.cloudstream.cf/dir_storm)\n\nDon't install all the plugins from a repo without knowing.",
+    "description": repos.map(value=> `${value.emoji} **${value.name}**: [Install](${value.url})`).join("\n\n") + "\n\nDon't install all the plugins from a repo without knowing.",
     "url": "https://cloudstream.cf/repos",
     "color": 16711680,
     "image": {

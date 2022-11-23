@@ -6,30 +6,50 @@ class AsyncConstructor {
                 {
                     name: "English",
                     url: "https://l.cloudstream.cf/eng",
+                    emoji: "🇬🇧",
+                    shortcut: "eng"
                 },
                 {
                     name: "Multi",
                     url: "https://l.cloudstream.cf/multi",
+                    emoji: "🌏",
+                    shortcut: "multi"
                 },
                 {
                     name: "Arabic",
                     url: "https://l.cloudstream.cf/arab",
+                    emoji: "🇯🇴",
+                    shortcut: "arab"
                 },
                 {
                     name: "Hexated",
                     url: "https://l.cloudstream.cf/hexa",
+                    emoji: "🌏",
+                    shortcut: "hexa"
                 },
                 {
                     name: "DarkDemon",
                     url: "https://l.cloudstream.cf/drepo",
+                    emoji: "🇮🇳",
+                    shortcut: "drepo"
                 },
                 {
                     name: "LikeDev",
                     url: "https://l.cloudstream.cf/likrepo",
+                    emoji: "🇮🇳",
+                    shortcut: "likrepo"
                 },
                 {
                     name: "NSFW",
                     url: "https://l.cloudstream.cf/nsfw",
+                    emoji: "🔞",
+                    shortcut: "nsfw"
+                },
+                {
+                    name: "Stormunblessed",
+                    url: "https://l.cloudstream.cf/storm",
+                    emoji: "🇪🇸",
+                    shortcut: "storm"
                 }
             ]
             if(inputs?.length > 0 && inputs[0].startsWith("http")) {
@@ -45,7 +65,8 @@ class AsyncConstructor {
                             "options": repos.map(value=> {
                                 return {
                                     "label": value.name,
-                                    "value": value.url
+                                    "value": value.url,
+                                    "emoji": value.emoji
                                 }
                             }),
                             "placeholder": "Choose a repository",
