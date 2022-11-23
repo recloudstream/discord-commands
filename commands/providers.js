@@ -1,7 +1,7 @@
 class AsyncConstructor {
-	constructor(args) {
-	    this.args = args;
-	    return (async (inputs) => {
+    constructor(args) {
+        this.args = args;
+        return (async (inputs) => {
             var repos = [
                 {
                     name: "English",
@@ -36,8 +36,8 @@ class AsyncConstructor {
                     url: "https://l.cloudstream.cf/strom",
                 }
             ]
-            if(inputs?.length > 0 && inputs[0].startsWith("http")) {
-                repos = [{name: "Custom", url: inputs[0]}]
+            if (inputs?.length > 0 && inputs[0].startsWith("http")) {
+                repos = [{ name: "Custom", url: inputs[0] }]
             }
             this.components = [
                 {
@@ -46,7 +46,7 @@ class AsyncConstructor {
                             "custom_id": "provider_select",
                             "max_values": 1,
                             "min_values": 1,
-                            "options": repos.map(value=> {
+                            "options": repos.map(value => {
                                 return {
                                     "label": value.name,
                                     "value": value.url
@@ -64,8 +64,8 @@ class AsyncConstructor {
                 "color": null
             }];
             this.allowedChannels = ["737729263221997619"]
-	    return this;
-         })(args);
-	}
+            return this;
+        })(args);
+    }
 }
 module.exports = AsyncConstructor;
