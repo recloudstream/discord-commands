@@ -1,5 +1,4 @@
 module.exports = function main() {
-  console.log("a")
   var repos = [
     {
       name: "English",
@@ -50,7 +49,6 @@ module.exports = function main() {
       shortcut: "storm"
     }
   ]
-  // :flag_gb: **English**: [Install](https://l.cloudstream.cf/dir_eng)\n\n
   this.embeds = [{
     "title": "Cloudstream Repositories",
     "description": repos.map(value => `${value.emoji} **${value.name}**: [Install](${value.url})`).join("\n\n") + "\n\nDon't install all the plugins from a repo without knowing.",
