@@ -49,7 +49,6 @@ module.exports = function main() {
       shortcut: "storm"
     }
   ]
-  
   this.embeds = [{
     "title": "Cloudstream Repositories",
     "description": repos.map(value => `${value.emoji} **${value.name}**: [Install](${value.url})`).join("\n\n") + "\n\nDon't install all the plugins from a repo without knowing.",
