@@ -37,22 +37,23 @@ module.exports = function main() {
       shortcut: "likrepo"
     },
     {
-      name: "NSFW",
-      url: "https://l.cloudstream.cf/dir_nsfw",
-      emoji: "🔞",
-      shortcut: "nsfw"
-    },
-    {
       name: "Stormunblessed",
       url: "https://l.cloudstream.cf/dir_storm",
       emoji: "🇪🇸",
       shortcut: "storm"
     },
  {
-      name: "<:cr:1045375485154173098> Crunchyroll",
+      name: "Crunchyroll",
       url: "https://l.cloudstream.cf/dir_kamy",
+      emoji: "<:cr:1045375485154173098>",
       shortcut: "kamy"
-    }
+    },
+{
+      name: "NSFW",
+      url: "https://l.cloudstream.cf/dir_nsfw",
+      emoji: "🔞",
+      shortcut: "nsfw"
+    },
   ]
   this.embeds = [{
     "title": "Cloudstream Repositories",
