@@ -13,12 +13,6 @@ module.exports = function main() {
       shortcut: "multi"
     },
     {
-      name: "Kamy (Crunchyroll) ",
-      url: "https://l.cloudstream.cf/dir_kamy",
-      emoji: "🌏",
-      shortcut: "kamy"
-    },
-    {
       name: "Arabic",
       url: "https://l.cloudstream.cf/dir_arab",
       emoji: "🇯🇴",
@@ -53,6 +47,15 @@ module.exports = function main() {
       url: "https://l.cloudstream.cf/dir_storm",
       emoji: "🇪🇸",
       shortcut: "storm"
+    },
+ {
+      name: "Kamy (Crunchyroll) ",
+      url: "https://l.cloudstream.cf/dir_kamy",
+      "emoji": {
+                      name: 'cr',
+                      id: '1045375485154173098',
+                    },
+      shortcut: "kamy"
     }
   ]
   this.embeds = [{
