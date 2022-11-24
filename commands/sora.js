@@ -17,7 +17,7 @@ module.exports = function main() {
     },
     {
       "title": "FAQ",
-      "description": "**1. The episode loading is taking too long**\nAs it scrapes a lot of sites, it takes time to load all of them. Skip loading after 5-10 seconds.\n**2. Some sources are not loading**\nSora has some geo restricted sources. Use vpn to access those sources.\n**3. Some titles are showing \"No links found\"**\nSora uses tmdb for catalogue, not the sources. So, it may show titles that no site has.",
+      "description": "**1. The episode loading is taking too long**\nAs it scrapes a lot of sites, it takes time to load all of them. Skip loading after 3-5 seconds.\n**2. Some sources are not loading**\nSora has some geo restricted sources. Use vpn to access those sources.\n**3. Some titles are showing \"No links found\"**\nSora uses tmdb for catalogue, not the sources. So, it may show titles that no site has.",
       "color": 11485
   }]
 }
