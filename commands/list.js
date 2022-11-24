@@ -3,7 +3,7 @@ class AsyncConstructor {
     constructor(args) {
         return (async () => {
             this.embeds = [{
-                "title": "Embeds",
+                "title": "Commands",
                 "description": (await getFiles("commands")).map(json => "." + json.name.replace(".js", "")).join("\n"),
                 "color": 3407616
             }]
