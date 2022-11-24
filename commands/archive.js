@@ -36,6 +36,7 @@ class AsyncConstructor {
 					"fields": fields
 				}
 			]
+			this.allowedChannels = ["737729263221997619", "851217659395571712", "1036144578690031726"]
 			return this;
 		})();
 	}
