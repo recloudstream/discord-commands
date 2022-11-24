@@ -51,7 +51,6 @@ module.exports = function main() {
  {
       name: "<:cr:1045375485154173098> Crunchyroll",
       url: "https://l.cloudstream.cf/dir_kamy",
-      //emoji: "🌏",
       shortcut: "kamy"
     }
   ]
