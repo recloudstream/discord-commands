@@ -82,7 +82,11 @@ class AsyncConstructor {
             var allList = []
             var issues = []
             for (const label of VALID_LABELS) {
-                issues.push(...(await axios.get(`https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open&per_page=100&labels=${label}`)).data)  
+                issues.push(...(await axios.get(`https://api.github.com/repos/danamag/stremio-addons-list/issues?state=open&per_page=100&labels=${label}`, {
+                    headers: {
+                        'accept-encoding': 'null'
+                    }
+                })).data)  
             }
             
             for (const issue of issues) {
