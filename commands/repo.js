@@ -13,6 +13,12 @@ module.exports = function main() {
       shortcut: "multi"
     },
     {
+      name: "Kamy (Crunchyroll) ",
+      url: "https://l.cloudstream.cf/dir_kamy",
+      emoji: "🌏",
+      shortcut: "kamy"
+    },
+    {
       name: "Arabic",
       url: "https://l.cloudstream.cf/dir_arab",
       emoji: "🇯🇴",
