@@ -49,12 +49,13 @@ module.exports = function main() {
       shortcut: "storm"
     },
  {
-      name: "Kamy (Crunchyroll) ",
+      name: "Kamy (Crunchyroll)",
       url: "https://l.cloudstream.cf/dir_kamy",
-      "emoji": {
+      emoji: "🌏",
+      /*"emoji": {
                       name: 'cr',
                       id: '1045375485154173098',
-                    },
+                    },*/
       shortcut: "kamy"
     }
   ]
