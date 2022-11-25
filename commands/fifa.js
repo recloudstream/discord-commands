@@ -1,7 +1,7 @@
 module.exports = function main() {
   this.embeds = [{
     "title": "FIFA World Cup Qatar 2022™",
-      "description": "To watch FIFA WC you can try these two sources. To get the schedule of the matches, [click here](https://time4tv.stream/schedule.php)",
+      "description": "To watch FIFA WC you can try these two sources. To get the schedule of the matches and to see which channel is broadcasting the mathc, [click here](https://time4tv.stream/schedule.php)",
       "color": 8328241
     },
     {
