@@ -1,19 +1,17 @@
 module.exports = function main() {
-  this.files = ["https://cdn.discordapp.com/attachments/1008654622740729897/1038783835233603604/time4tv.mp4"]
   this.embeds = [{
-    "title": "To watch Fifa WC, use Time4tv",
-      "description": "**Step 1:** Install [Hexated](https://l.cloudstream.cf/dir_hexa) repo.\n**Step 2:** Click on the Hexated repo.\n**Step 3:** Scroll down the source list and install time4tv.",
-      "color": 10160136,
-      "thumbnail": {
-        "url": "https://cdn.discordapp.com/attachments/1015131233824538624/1044145155365687356/fifa.png"
-      }
+    "title": "FIFA World Cup Qatar 2022™",
+      "description": "To watch FIFA WC you can try these two sources. To get the schedule of the matches, [click here](https://time4tv.stream/schedule.php)",
+      "color": 8328241
     },
     {
-      "title": "To get schedule and channel names of every event, click here.",
-      "url": "https://time4tv.stream/schedule.php",
-      "color": 16732930,
-      "thumbnail": {
-        "url": "https://cdn-icons-png.flaticon.com/512/3652/3652191.png"
-      }
+      "title": "Time4tv",
+      "description": "**Step 1:** Install [Hexated](https://l.cloudstream.cf/dir_hexa) repo.\n**Step 2:** Click on the Hexated repo.\n**Step 3:** Scroll down the source list and install time4tv.\n\n⚠️ To get the video guide of the process, use **.t4tv** in <#737729263221997619>",
+      "color": 8328241
+    },
+    {
+      "title": "Stremio iptv.org",
+      "description": "**Step 1:** Install [English](https://l.cloudstream.cf/dir_eng) repo.\n**Step 2:** Click on the English repo and install **Stremio**\n**Step 3:** Then **clone stremio** using [this link](https://2ecbbd610840-stremio-iptv.baby-beamup.club/cmVnaW9ucz1iZWluaXB0dixlZ2lwdHZ8Y29zdHVtZT12aXA6VklQIDphSFIwY0hNNkx5OWpaRzR1WkdselkyOXlaR0Z3Y0M1amIyMHZZWFIwWVdOb2JXVnVkSE12TVRBME5UQTVOVEUxTlRNek1UVXhNRE13TWk4eE1EUTFNRGsxTXpBek5EQXpNREkwTkRNMEwzZHZlV1ZrYjNWaWJHVndkV05sWHprdWJUTjE=/)\n\n⚠️ To get the video guide of the process, use **.stremiotv** in <#737729263221997619>",
+      "color": 8328241
   }]
 }
