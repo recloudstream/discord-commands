@@ -5,6 +5,11 @@ module.exports = function main() {
       "color": 8328241
     },
     {
+      "title": "9GOAL TV",
+      "description": "**Step 1:** Install [Multi](https://l.cloudstream.cf/dir_multi) repo.\n**Step 2:** Click on the Multi repo.\n**Step 3:** Scroll down the source list and install 9goal.",
+      "color": 8328241
+    },
+    {
       "title": "Time4tv",
       "description": "**Step 1:** Install [Hexated](https://l.cloudstream.cf/dir_hexa) repo.\n**Step 2:** Click on the Hexated repo.\n**Step 3:** Scroll down the source list and install time4tv.\n\n⚠️ To get the video guide of the process, use **.t4tv** in <#737729263221997619>",
       "color": 8328241
