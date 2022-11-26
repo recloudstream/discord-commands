@@ -1,3 +1,4 @@
+const requireFromString = require('require-from-string');
 class AsyncConstructor {
     constructor(args) {
         this.args = args;
