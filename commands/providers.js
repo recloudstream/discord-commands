@@ -2,44 +2,8 @@ class AsyncConstructor {
     constructor(args) {
         this.args = args;
         return (async (inputs) => {
-            var repos = [
-                {
-                    name: "English",
-                    url: "https://l.cloudstream.cf/eng",
-                },
-                {
-                    name: "Multi",
-                    url: "https://l.cloudstream.cf/multi",
-                },
-                {
-                    name: "Arabic",
-                    url: "https://l.cloudstream.cf/arab",
-                },
-                {
-                    name: "Hexated",
-                    url: "https://l.cloudstream.cf/hexa",
-                },
-                {
-                    name: "DarkDemon",
-                    url: "https://l.cloudstream.cf/drepo",
-                },
-                {
-                    name: "LikeDev",
-                    url: "https://l.cloudstream.cf/likrepo",
-                },
-                {
-                    name: "NSFW",
-                    url: "https://l.cloudstream.cf/nsfw",
-                } ,
-                {
-                    name: "Stormunblessed",
-                    url: "https://raw.githubusercontent.com/Stormunblessed/stormunblessed-cs3/master/repo.json",
-                } ,
-                {
-                    name: "Kamy",
-                    url: "https://l.cloudstream.cf/kamy",
-                }
-            ]
+            var file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
+            var repos = requireFromString(file.code)
             if (inputs?.length > 0 && inputs[0].startsWith("http")) {
                 repos = [{ name: "Custom", url: inputs[0] }]
             }
@@ -51,9 +15,18 @@ class AsyncConstructor {
                             "max_values": 1,
                             "min_values": 1,
                             "options": repos.map(value => {
+                                var emojiValue = value.emoji;
+                                if(emojiValue.includes(":")) {
+                                    var emojiArray = emojiValue.replace(/<:|>/g, "").split(":")
+                                    emojiValue = {
+                                        "name": emojiArray[0],
+                                        "id": emojiArray[1]
+                                    }
+                                }
                                 return {
                                     "label": value.name,
-                                    "value": value.url
+                                    "value": value.url,
+                                    "emoji": emojiValue
                                 }
                             }),
                             "placeholder": "Choose a repository",
