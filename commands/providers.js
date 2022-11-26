@@ -25,7 +25,7 @@ class AsyncConstructor {
                                 }
                                 return {
                                     "label": value.name,
-                                    "value": value.url,
+                                    "value": value.raw_url,
                                     "emoji": emojiValue
                                 }
                             }),
