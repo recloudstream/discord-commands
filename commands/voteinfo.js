@@ -18,18 +18,18 @@ class AsyncConstructor {
 		return this;
 	    }
 	    let file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
-            let repo = requireFromString(file.code).find(it => it?.name === repoId || it?.shortcut === repoId).raw_url
+            let repo = requireFromString(file.code).find(it => it?.name === repoId || it?.shortcut === repoId)?.raw_url
             if (!repo && repoId.indexOf("http") !== -1) {
 		this.content = "No repo found"
 		return this;
 	    }
-            let repoResponse = (await axios.get(repo, {
+            let repoResponse = repo && (await axios.get(repo, {
                 headers: {
                     'accept-encoding': 'null'
                 }
             })).data;
             let repoPlugins = []
-            for (const pluginUrl of repoResponse.pluginLists) {
+            for (const pluginUrl of repoResponse?.pluginLists) {
                 if (!pluginUrl || !pluginUrl.startsWith("http")) continue;
                 (await axios.get(pluginUrl, {
                     headers: {
