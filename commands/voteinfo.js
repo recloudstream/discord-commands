@@ -26,7 +26,7 @@ class AsyncConstructor {
                 }
             })).data;
             let repoPlugins = []
-            for (const pluginUrl of RepoResponse.pluginLists) {
+            for (const pluginUrl of repoResponse.pluginLists) {
                 if (!pluginUrl || !pluginUrl.startsWith("http")) continue;
                 (await axios.get(pluginUrl, {
                     headers: {
