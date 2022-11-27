@@ -14,7 +14,7 @@ class AsyncConstructor {
             try {
             let repoId = inputs?.at(0)
             let pluginId = inputs?.at(1)
-            if (!repoId || !pluginId) {
+            if (!repoId) {
                 this.content = "U need to add something to the command dummy, repo and plugin name"
                 return this;
             }
