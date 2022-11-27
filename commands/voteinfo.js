@@ -42,18 +42,20 @@ class AsyncConstructor {
             let plugin = repoPlugins?.find(it => it?.name === pluginId || it?.internalName == pluginId)
             let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
             let countReponse = (await axios.get(url)).data;
-            this.embeds = [
-                {
-                    "title": "VoteAPI entry info",
-                    "fields": (["Created", "TTL"].map(it=>({
+	    let fields = ["Created", "TTL"].map(it=>({
                         "name": it,
                         "value": `<t:${countReponse[it.toLowerCase()]}:R>`,
                         "inline": false
-                    })) + ["Value", "Update Lowerbound", "Update Upperbound"].map(it=>({
+                    }))
+	    fields += ["Value", "Update Lowerbound", "Update Upperbound"].map(it=>({
                         "name": it,
-                        "value": `<t:${countReponse[it.toLowerCase().replace(/\s/g,"_")]}:R>`,
+                        "value": `${countReponse[it.toLowerCase().replace(/\s/g,"_")]}`,
                         "inline": false
-                    })))
+                    }))
+            this.embeds = [
+                {
+                    "title": "VoteAPI entry info",
+                    fields
                 }
             ]
 			return this;
