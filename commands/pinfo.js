@@ -1,5 +1,6 @@
 const axios = require("axios");
 const requireFromString = require('require-from-string');
+const { getLanguage } = require("language-flag-colors");
 const { createHash } = require("crypto");
 function hash(url) {
     return createHash("sha256")
@@ -71,12 +72,12 @@ class AsyncConstructor {
                         },
                         {
                             "name": "Plugin Language",
-                            "value": plugin.language,
+                            "value": getLanguage(plugin.language ?? "none")?.flag?.emoji ?? "🏳️",
                             "inline": true
                         },
                         {
                             "name": "Plugin Types",
-                            "value": plugin.tvTypes.join(", "),
+                            "value": plugin.tvTypes.join(", ") ?? "Unknown",
                             "inline": true
                         },
                         {
@@ -86,7 +87,7 @@ class AsyncConstructor {
                         }
                     ]),
                     "thumbnail": {
-                        "url": plugin.iconUrl ?? "https://cdn0.iconfinder.com/data/icons/file-management-system-flat/32/file_managemenr_system_icon_set_flat_style-14-512.png"
+                        "url": plugin.iconUrl.replace("%size%", "1024") ?? "https://cdn0.iconfinder.com/data/icons/file-management-system-flat/32/file_managemenr_system_icon_set_flat_style-14-512.png"
                     }
                 }
             ]
