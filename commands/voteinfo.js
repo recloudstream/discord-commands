@@ -29,7 +29,7 @@ class AsyncConstructor {
                 }
             })).data;
             let repoPlugins = []
-            for (const pluginUrl of repoResponse?.pluginLists) {
+            for (const pluginUrl of repoResponse?.pluginLists || []) {
                 if (!pluginUrl || !pluginUrl.startsWith("http")) continue;
                 (await axios.get(pluginUrl, {
                     headers: {
@@ -39,7 +39,7 @@ class AsyncConstructor {
                     repoPlugins.push(data);
                 });
             }
-            let plugin = repoPlugins.find(it => it?.name === pluginId || it?.internalName == pluginId)
+            let plugin = repoPlugins?.find(it => it?.name === pluginId || it?.internalName == pluginId)
             let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
             let countReponse = (await axios.get(url)).data;
             this.embeds = [
