@@ -72,23 +72,28 @@ class AsyncConstructor {
                     "fields": fields
                     .concat([
                         {
+                            "name": "Version",
+                            "value": plugin.version,
+                            "inline": true
+                        }.
+                        {
                             "name": "Size",
                             "value": plugin.fileSize / 1000 + " KB",
                             "inline": true
                         },
                         {
                             "name": "Language",
-                            "value": getLanguage(plugin.language ?? "none")?.flag?.emoji ?? "🏳️" + `( ${plugin.language} )`,
+                            "value": getLanguage(plugin.language ?? "none")?.flag?.emoji ?? "🏳️",
                             "inline": true
                         },
                         {
                             "name": "Types",
-                            "value": plugin.tvTypes.join(", ") ?? "Unknown",
+                            "value": plugin?.tvTypes?.join(", ") ?? "Unknown",
                             "inline": true
                         },
                         {
                             "name": "Authors",
-                            "value": plugin.authors.join(", ") ?? "Unknown",
+                            "value": plugin?.authors?.join(", ") ?? "Unknown",
                             "inline": true
                         },
                         {
