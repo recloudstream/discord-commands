@@ -52,6 +52,7 @@ class AsyncConstructor {
                         "value": `${countReponse[it.toLowerCase().replace(/\s/g,"_")]}`,
                         "inline": false
                     }))
+	    console.log(fields)
             this.embeds = [
                 {
                     "title": "VoteAPI entry info",
