@@ -46,23 +46,48 @@ class AsyncConstructor {
             ["Created", "TTL"].forEach(it => {
                 fields.push({
                 "name": it,
-                "value": `<t:${countResponse[it.toLowerCase()]}:R>`,
-                "inline": false
+                "value": `<t:${Date.now() - countResponse[it.toLowerCase()]}:R>`,
+                "inline": true
                 })
             });
             ["Value", "Update Lowerbound", "Update Upperbound"].forEach(it => {
                 fields.push({
-                    "name": it,
-                    "value": `Value ${countResponse[it.toLowerCase().replace(/\s/g, "_")]}`,
-                    "inline": false
+                    "name": it.replace("Value", "Votes"),
+                    "value": `${countResponse[it.toLowerCase().replace(/\s/g, "_")]}`,
+                    "inline": true
                 })
             });
             console.log(fields);
             fields = fields || []
             this.embeds = [
                 {
-                    "title": "VoteAPI entry info",
+                    "title": plugin.internalName.replace("Provider", ""),
                     "fields": fields
+                    .concat([
+                        {
+                            "name": "Plugin Size",
+                            "value": plugin.fileSize / 1000 + " KB",
+                            "inline": true
+                        },
+                        {
+                            "name": "Plugin Language",
+                            "value": plugin.language,
+                            "inline": true
+                        },
+                        {
+                            "name": "Plugin Types",
+                            "value": plugin.tvTypes.join(", "),
+                            "inline": true
+                        },
+                        {
+                            "name": "Plugin Repository",
+                            "value": plugin.repositoryUrl,
+                            "inline": true
+                        }
+                    ]),
+                    "thumbnail": {
+                        "url": plugin.iconUrl ?? "https://cdn0.iconfinder.com/data/icons/file-management-system-flat/32/file_managemenr_system_icon_set_flat_style-14-512.png"
+                    }
                 }
             ]
             return this;
