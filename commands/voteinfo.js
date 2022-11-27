@@ -8,7 +8,7 @@ function hash(url) {
 
 class AsyncConstructor {
 	constructor(args) {
-	    return (async (args) => {
+	    return (async (inputs) => {
             this.noMessage = false
             let repoId = inputs?.at(0)
             let pluginId = inputs?.at(1)
@@ -53,7 +53,7 @@ class AsyncConstructor {
                 }
             ]
 			return this;
-		})();
+		})(args);
 	}
 }
 module.exports = AsyncConstructor
