@@ -44,12 +44,12 @@ class AsyncConstructor {
                 it?.name.toLowerCase().includes(pluginId.toLowerCase()) || 
                 it?.internalName.toLowerCase().includes(pluginId.toLowerCase())
                 )
-            if(!plugin?.url) {
+            let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoUrl);
+            let countResponse = (await axios.get(url)).data;
+            if (!countReponse) {
                 this.content = "No such a plugin like this."
                 return this;
             }
-            let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url);
-            let countResponse = (await axios.get(url)).data;
             let fields = [
                 {
                     "name": "Created",
@@ -70,11 +70,8 @@ class AsyncConstructor {
                 })
             });
             fields = fields || []
-            this.embeds = [
-                {
-                    "title": plugin.internalName.replace("Provider", ""),
-                    "fields": fields
-                    .concat([
+            if (plugin) {
+                fields.push(
                         {
                             "name": "Version",
                             "value": plugin.version,
@@ -110,7 +107,12 @@ class AsyncConstructor {
                             "value": `[Download](${plugin.url})`,
                             "inline": true
                         }
-                    ]),
+                    )
+            }
+            this.embeds = [
+                {
+                    "title": plugin.internalName.replace("Provider", ""),
+                    fields,
                     "thumbnail": {
                         "url": plugin.iconUrl.replace("%size%", "128") ?? "https://cdn0.iconfinder.com/data/icons/file-management-system-flat/32/file_managemenr_system_icon_set_flat_style-14-512.png"
                     }
