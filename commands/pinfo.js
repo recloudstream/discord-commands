@@ -10,7 +10,7 @@ function hash(url) {
 class AsyncConstructor {
     constructor(args) {
         return (async (inputs) => {
-            this.noMessage = false
+            try {
             let repoId = inputs?.at(0)
             let pluginId = inputs?.at(1)
             if (!repoId || !pluginId) {
@@ -41,15 +41,15 @@ class AsyncConstructor {
             }
             let plugin = repoPlugins?.find(it => it?.name.includes(pluginId) || it?.internalName.includes(pluginId))
             let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
-            let countReponse = (await axios.get(url)).data;
+            let countResponse = (await axios.get(url)).data;
             let fields = ["Created", "TTL"].map(it => ({
                 "name": it,
-                "value": `<t:${countReponse[it.toLowerCase()]}:R>`,
+                "value": `<t:${countResponse[it.toLowerCase()]}:R>`,
                 "inline": false
             }))
             fields += ["Value", "Update Lowerbound", "Update Upperbound"].map(it => ({
                 "name": it,
-                "value": `Value ${countReponse[it.toLowerCase().replace(/\s/g, "_")]}`,
+                "value": `Value ${countResponse[it.toLowerCase().replace(/\s/g, "_")]}`,
                 "inline": false
             }))
             fields = fields || []
@@ -60,6 +60,10 @@ class AsyncConstructor {
                 }
             ]
             return this;
+        } catch(err) {
+            this.content = err.message
+            return this;
+        }
         })(args);
     }
 }
