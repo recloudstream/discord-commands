@@ -46,7 +46,7 @@ class AsyncConstructor {
                 )
             let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
             let countResponse = (await axios.get(url)).data;
-            if (!countReponse) {
+            if (!countResponse) {
                 this.content = "No such a plugin like this."
                 return this;
             }
