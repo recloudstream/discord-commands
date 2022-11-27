@@ -46,7 +46,7 @@ class AsyncConstructor {
             ["Created", "TTL"].forEach(it => {
                 fields.push({
                 "name": it,
-                "value": `<t:${Date.now() - countResponse[it.toLowerCase()]}:R>`,
+                "value": `<t:${countResponse[it.toLowerCase()]}:R>`,
                 "inline": true
                 })
             });
