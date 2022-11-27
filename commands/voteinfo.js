@@ -15,7 +15,7 @@ class AsyncConstructor {
             let pluginId = inputs?.at(1)
 	    if (!repoId) {
 		this.content = "U need to add something to the command dummy"
-		return;
+		return this;
 	    }
 	    let file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
             let repo = requireFromString(file.code).find(it => it?.name === repoId || it?.sort === shortcut).url
