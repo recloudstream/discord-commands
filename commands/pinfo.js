@@ -88,12 +88,12 @@ class AsyncConstructor {
                         },
                         {
                             "name": "Types",
-                            "value": plugin?.tvTypes?.join(", ") ?? "Unknown",
+                            "value": plugin?.tvTypes?.join(", ") || "Unknown",
                             "inline": true
                         },
                         {
                             "name": "Authors",
-                            "value": plugin?.authors?.join(", ") ?? "Unknown",
+                            "value": plugin?.authors?.join(", ") || "Unknown",
                             "inline": true
                         },
                         {
