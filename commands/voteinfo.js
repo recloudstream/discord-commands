@@ -18,7 +18,7 @@ class AsyncConstructor {
 		return this;
 	    }
 	    let file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
-            let repo = requireFromString(file.code).find(it => it?.name === repoId || it?.sort === repoId).url
+            let repo = requireFromString(file.code).find(it => it?.name === repoId || it?.shortcut === repoId).raw_url
             if (!repo && repoId.indexOf("http") !== -1) repo = repoId 
             let repoResponse = (await axios.get(repo, {
                 headers: {
