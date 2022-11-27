@@ -9,9 +9,13 @@ function hash(url) {
 class AsyncConstructor {
 	constructor(args) {
 		return (async (inputs) => {
-            let repoId = inputs.at(0)
-            let pluginId = inputs.at(1)
-			let file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
+            let repoId = inputs?.at(0)
+            let pluginId = inputs?.at(1)
+	    if (!repoId) {
+		this.content = "U need to add something to the command dummy"
+		return;
+	    }
+	    let file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
             let repo = requireFromString(file.code).find(it => it?.name === repoId || it?.sort === shortcut).url
             if (!repo && repoId.indexOf("http") !== -1) repo = repoId 
             let repoResponse = (await axios.get(repo, {
