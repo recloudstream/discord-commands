@@ -40,8 +40,15 @@ class AsyncConstructor {
                     repoPlugins.push(data);
                 });
             }
-            let plugin = repoPlugins?.find(it => it?.name.toLowerCase().includes(pluginId.toLowerCase()) || it?.internalName.toLowerCase().includes(pluginId.toLowerCase()))
-            let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
+            let plugin = repoPlugins?.find(it => 
+                it?.name.toLowerCase().includes(pluginId.toLowerCase()) || 
+                it?.internalName.toLowerCase().includes(pluginId.toLowerCase())
+                )
+            if(!plugin?.url) {
+                this.content = "No such a plugin like this."
+                return this;
+            }
+            let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url);
             let countResponse = (await axios.get(url)).data;
             let fields = [];
             ["Created", "TTL"].forEach(it => {
@@ -58,7 +65,6 @@ class AsyncConstructor {
                     "inline": true
                 })
             });
-            console.log(fields);
             fields = fields || []
             this.embeds = [
                 {
