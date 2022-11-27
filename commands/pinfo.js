@@ -8,21 +8,21 @@ function hash(url) {
 }
 
 class AsyncConstructor {
-	constructor(args) {
-	    return (async (inputs) => {
+    constructor(args) {
+        return (async (inputs) => {
             this.noMessage = false
             let repoId = inputs?.at(0)
             let pluginId = inputs?.at(1)
-	    if (!repoId) {
-		this.content = "U need to add something to the command dummy"
-		return this;
-	    }
-	    let file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
+            if (!repoId || !pluginId) {
+                this.content = "U need to add something to the command dummy, repo and plugin name"
+                return this;
+            }
+            let file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
             let repo = requireFromString(file.code).find(it => it?.name === repoId || it?.shortcut === repoId)?.raw_url
             if (!repo && repoId.indexOf("http") === -1) {
-		this.content = "No repo found"
-		return this;
-	    }
+                this.content = "No repo found"
+                return this;
+            }
             let repoResponse = repo && (await axios.get(repo, {
                 headers: {
                     'accept-encoding': 'null'
@@ -42,25 +42,25 @@ class AsyncConstructor {
             let plugin = repoPlugins?.find(it => it?.name.includes(pluginId) || it?.internalName.includes(pluginId))
             let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
             let countReponse = (await axios.get(url)).data;
-	    let fields = ["Created", "TTL"].map(it=>({
-                        "name": it,
-                        "value": `<t:${countReponse[it.toLowerCase()]}:R>`,
-                        "inline": false
-                    }))
-	    fields += ["Value", "Update Lowerbound", "Update Upperbound"].map(it=>({
-                        "name": it,
-                        "value": `${countReponse[it.toLowerCase().replace(/\s/g,"_")]}`,
-                        "inline": false
-                    }))
-		fields = fields || []
+            let fields = ["Created", "TTL"].map(it => ({
+                "name": it,
+                "value": `<t:${countReponse[it.toLowerCase()]}:R>`,
+                "inline": false
+            }))
+            fields += ["Value", "Update Lowerbound", "Update Upperbound"].map(it => ({
+                "name": it,
+                "value": `Value ${countReponse[it.toLowerCase().replace(/\s/g, "_")]}`,
+                "inline": false
+            }))
+            fields = fields || []
             this.embeds = [
                 {
                     "title": "VoteAPI entry info",
-                    fields
+                    "fields": fields
                 }
             ]
-			return this;
-		})(args);
-	}
+            return this;
+        })(args);
+    }
 }
 module.exports = AsyncConstructor
