@@ -75,7 +75,7 @@ class AsyncConstructor {
                             "name": "Version",
                             "value": plugin.version,
                             "inline": true
-                        }.
+                        },
                         {
                             "name": "Size",
                             "value": plugin.fileSize / 1000 + " KB",
