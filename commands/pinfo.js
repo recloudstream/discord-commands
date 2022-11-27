@@ -47,11 +47,12 @@ class AsyncConstructor {
                 "value": `<t:${countResponse[it.toLowerCase()]}:R>`,
                 "inline": false
             }))
-            fields += ["Value", "Update Lowerbound", "Update Upperbound"].map(it => ({
+            ["Value", "Update Lowerbound", "Update Upperbound"].map(it => fields.push({
                 "name": it,
                 "value": `Value ${countResponse[it.toLowerCase().replace(/\s/g, "_")]}`,
                 "inline": false
             }))
+            console.log(fields);
             fields = fields || []
             this.embeds = [
                 {
