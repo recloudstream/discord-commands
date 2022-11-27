@@ -1,4 +1,5 @@
 const axios = require("axios");
+const requireFromString = require('require-from-string');
 const { createHash } = require("crypto");
 function hash(url) {
     return createHash("sha256")
