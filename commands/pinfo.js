@@ -54,7 +54,7 @@ class AsyncConstructor {
             ["Created", "TTL"].forEach(it => {
                 fields.push({
                 "name": it,
-                "value": `<t:${countResponse[it.toLowerCase()]}:R> -> ${countResponse[it.toLowerCase()]}`,
+                "value": `<t:${Math.round(countResponse[it.toLowerCase()]/1000)}:R>`,
                 "inline": true
                 })
             });
@@ -72,32 +72,32 @@ class AsyncConstructor {
                     "fields": fields
                     .concat([
                         {
-                            "name": "Plugin Size",
+                            "name": "Size",
                             "value": plugin.fileSize / 1000 + " KB",
                             "inline": true
                         },
                         {
-                            "name": "Plugin Language",
+                            "name": "Language",
                             "value": getLanguage(plugin.language ?? "none")?.flag?.emoji ?? "🏳️" + `( ${plugin.language} )`,
                             "inline": true
                         },
                         {
-                            "name": "Plugin Types",
+                            "name": "Types",
                             "value": plugin.tvTypes.join(", ") ?? "Unknown",
                             "inline": true
                         },
                         {
-                            "name": "Plugin Authors",
+                            "name": "Authors",
                             "value": plugin.authors.join(", ") ?? "Unknown",
                             "inline": true
                         },
                         {
-                            "name": "Plugin Repository",
+                            "name": "Repository",
                             "value": `[Repository](${plugin.repositoryUrl})`,
                             "inline": true
                         },
                         {
-                            "name": "Plugin Download URL",
+                            "name": "Download URL",
                             "value": `[Download](${plugin.url})`,
                             "inline": true
                         }
