@@ -44,7 +44,7 @@ class AsyncConstructor {
                 it?.name.toLowerCase().includes(pluginId.toLowerCase()) || 
                 it?.internalName.toLowerCase().includes(pluginId.toLowerCase())
                 )
-            let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoUrl);
+            let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
             let countResponse = (await axios.get(url)).data;
             if (!countReponse) {
                 this.content = "No such a plugin like this."
