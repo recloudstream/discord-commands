@@ -40,14 +40,14 @@ class AsyncConstructor {
                     repoPlugins.push(data);
                 });
             }
-            let plugin = repoPlugins?.find(it => it?.name.includes(pluginId) || it?.internalName.includes(pluginId))
+            let plugin = repoPlugins?.find(it => it?.name.toLowerCase().includes(pluginId.toLowerCase()) || it?.internalName.toLowerCase().includes(pluginId.toLowerCase()))
             let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url || repoId);
             let countResponse = (await axios.get(url)).data;
             let fields = [];
             ["Created", "TTL"].forEach(it => {
                 fields.push({
                 "name": it,
-                "value": `<t:${countResponse[it.toLowerCase()]}:R>`,
+                "value": `<t:${countResponse[it.toLowerCase()]}:R> -> ${countResponse[it.toLowerCase()]}`,
                 "inline": true
                 })
             });
@@ -72,7 +72,7 @@ class AsyncConstructor {
                         },
                         {
                             "name": "Plugin Language",
-                            "value": getLanguage(plugin.language ?? "none")?.flag?.emoji ?? "🏳️",
+                            "value": getLanguage(plugin.language ?? "none")?.flag?.emoji ?? "🏳️" + `( ${plugin.language} )`,
                             "inline": true
                         },
                         {
@@ -81,8 +81,18 @@ class AsyncConstructor {
                             "inline": true
                         },
                         {
+                            "name": "Plugin Authors",
+                            "value": plugin.authors.join(", ") ?? "Unknown",
+                            "inline": true
+                        },
+                        {
                             "name": "Plugin Repository",
-                            "value": plugin.repositoryUrl,
+                            "value": `[Repository](${plugin.repositoryUrl})`,
+                            "inline": true
+                        },
+                        {
+                            "name": "Plugin Download URL",
+                            "value": `[Download](${plugin.url})`,
                             "inline": true
                         }
                     ]),
