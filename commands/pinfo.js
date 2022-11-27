@@ -111,7 +111,7 @@ class AsyncConstructor {
             }
             this.embeds = [
                 {
-                    "title": plugin.internalName.replace("Provider", ""),
+                    "title": plugin?.name?.replace("Provider", "")||"Extension",
                     fields,
                     "thumbnail": {
                         "url": plugin.iconUrl.replace("%size%", "128") ?? "https://cdn0.iconfinder.com/data/icons/file-management-system-flat/32/file_managemenr_system_icon_set_flat_style-14-512.png"
