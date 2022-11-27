@@ -8,8 +8,7 @@ function hash(url) {
 
 class AsyncConstructor {
 	constructor(args) {
-            this.args = args;
-	    return (async (inputs) => {
+	    return (async (args) => {
             this.noMessage = false
             let repoId = inputs?.at(0)
             let pluginId = inputs?.at(1)
