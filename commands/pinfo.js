@@ -50,14 +50,18 @@ class AsyncConstructor {
             }
             let url = "https://api.countapi.xyz/info/cs3-votes/" + hash(plugin?.url);
             let countResponse = (await axios.get(url)).data;
-            let fields = [];
-            ["Created", "TTL"].forEach(it => {
-                fields.push({
-                "name": it,
-                "value": `<t:${Math.round(countResponse[it.toLowerCase()]/1000)}:R>`,
-                "inline": true
-                })
-            });
+            let fields = [
+                {
+                    "name": "Created",
+                    "value": `<t:${Math.round(countResponse.created/1000)}:R>`,
+                    "inline": true
+                },
+                {
+                    "name": "TTL",
+                    "value": `<t:${Math.round((new Date().getTime()+countResponse.ttl)/1000)}:R>`,
+                    "inline": true
+                },
+            ];
             ["Value", "Update Lowerbound", "Update Upperbound"].forEach(it => {
                 fields.push({
                     "name": it.replace("Value", "Votes"),
