@@ -56,6 +56,13 @@ module.exports = [
         shortcut: "kamy"
     },
     {
+        name: "Eddy",
+        url: "https://l.cloudstream.cf/dir_eddy",
+        raw_url: "https://l.cloudstream.cf/eddy",
+        emoji: ":french_bread:",
+        shortcut: "eddy"
+    },
+    {
         name: "NSFW",
         url: "https://l.cloudstream.cf/dir_nsfw",
         raw_url: "https://l.cloudstream.cf/nsfw",
