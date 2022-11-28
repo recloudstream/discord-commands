@@ -4,7 +4,7 @@ module.exports = function main() {
   var repos = requireFromString(file.code)
   this.embeds = [{
     "title": "Cloudstream Repositories",
-    "description": repos.map(value => `${value.emoji} **${value.name}**: [Install](${value.url})`).join("\n\n")",
+    "description": repos.map(value => `${value.emoji} **${value.name}**: [Install](${value.url})`).join("\n\n"),
     "url": "https://cloudstream.cf/repos",
     "color": 16711680,
   }]
