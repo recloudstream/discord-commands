@@ -5,7 +5,7 @@ module.exports = function main() {
       "color": 8328241
     },
     {
-      "title": "9GOAL TV",
+      "title": "9GOAL TV (Recommended)",
       "description": "**Step 1:** Install [Multi](https://l.cloudstream.cf/dir_multi) repo.\n**Step 2:** Click on the Multi repo.\n**Step 3:** Scroll down the source list and install 9goal.",
       "color": 8328241
     },
