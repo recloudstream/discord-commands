@@ -5,7 +5,7 @@ module.exports = function main() {
   this.files = ["https://cdn.discordapp.com/attachments/1008296541926199337/1036935177508757544/manual.mp4"]
   this.embeds = [{
     "title": "For manual install of the repositories",
-    "description": repos.map(value => `${value.emoji} ${value.name}: **${value.shortcut}**`).join("\n"),
+    "description": repos.map(value => `${value.emoji} ${value.name}: **${value.shortcut}**`).join("\n\n"),
     "color": 16711680
   }]
 }
