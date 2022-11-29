@@ -59,7 +59,7 @@ module.exports = [
         name: "Eddy",
         url: "https://l.cloudstream.cf/dir_eddy",
         raw_url: "https://l.cloudstream.cf/eddy",
-        emoji: "🇫🇷",
+        emoji: "<:cr:1045375485154173098>",
         shortcut: "eddy"
     },
     {
