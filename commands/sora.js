@@ -4,7 +4,7 @@ module.exports = function main() {
       "description": "Sorastream is a MultiAPI based source that scrapes **A LOT** of sites and uses tmdb for catalogue.",
       "color": 11485,
       "thumbnail": {
-        "url": "https://cdn.discordapp.com/attachments/1008654622740729897/1040642784362762260/SORA.png"
+        "url": "https://raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/SoraStream/Icon.png"
       }
     },
     {
@@ -12,7 +12,7 @@ module.exports = function main() {
       "description": "**Step 1:** Install [**Hexated**](https://cs.repo/?raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/builds/repo.json) repo.\n**Step 2:** Click on the Hexated repo.\n**Step 3:** Scroll down the source list and install sorastream.",
       "color": 11485,
       "image": {
-        "url": "https://cdn.discordapp.com/attachments/1008654622740729897/1040646459437092985/image.png"
+        "url": "https://cdn.discordapp.com/attachments/1008207706143871067/1047801841729159198/4HrnIIn.png"
       }
     },
     {
