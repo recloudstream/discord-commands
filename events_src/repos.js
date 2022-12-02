@@ -14,7 +14,7 @@ module.exports = [
         shortcut: "arab"
     },
     {
-        name: "Multi",
+        name: "Multilingual",
         url: "https://l.cloudstream.cf/dir_multi",
         raw_url: "https://l.cloudstream.cf/multi",
         emoji: "🌏",
