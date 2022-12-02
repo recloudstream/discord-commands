@@ -14,6 +14,20 @@ class AsyncConstructor {
                         "url": "https://cdn.discordapp.com/attachments/1008207706143871067/1038448568589094982/7R.png"
                     }
                 }]
+                this.components = [
+        {
+            "type": 1,
+            "components": [
+                {
+                    "type": 2,
+                    "label": "Download",
+                    "style": 5,
+                    "url": apk.browser_download_url
+                }
+            ]
+
+        }
+    ]
                 return this
             })(args);
 	}
