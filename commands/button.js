@@ -10,6 +10,13 @@ module.exports = function main() {
                 "url": "https://discord.com/developers/docs/interactions/message-components#action-rows",
                 "style": 5,
                 "emoji": "😀"
+            },
+            {
+                "type": 2,
+                "label": "Click me!",
+                "url": "https://discord.com/developers/docs/interactions/message-components#action-rows",
+                "style": 5,
+                "emoji": "😀"
             }
         ]
     }
