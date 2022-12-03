@@ -10,7 +10,7 @@ this.embeds = [{
     },
     {
       "title": "Cons:",
-      "description": "1. Features being added very late\n2. Very late fix updates\n3. Some sources may not work because of the needed API update\n4. Most of the helpers use beta as that has all the latest features",
+      "description": "1. Features being added very late\n2. Very late fix updates\n3. Some sources may not work because of the needed API updates\n4. Most of the helpers use the beta version, as that has all the latest features",
       "color": 14811650
   
   }]
