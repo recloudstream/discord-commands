@@ -99,11 +99,11 @@ class AsyncConstructor {
                         },
                         {
                             "name": "Repository",
-                            "value": `[Repository](${plugin.repositoryUrl})`,
+                            "value": `<cloudstreamrepo://${repo.replace("https://", "")}>`,
                             "inline": true
                         },
                         {
-                            "name": "Download URL",
+                            "name": "Raw Download",
                             "value": `[Download](${plugin.url})`,
                             "inline": true
                         }
