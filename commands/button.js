@@ -9,7 +9,10 @@ module.exports = function main() {
                 "label": "Site",
                 "url": "https://cloudstream.cf",
                 "style": 5,
-                "emoji": "<:7R:1037622920811384903>"
+                "emoji": {
+                     "name": "7R",
+                     "id": "1037622920811384903"
+                  }
             },
             {
                 "type": 2,
