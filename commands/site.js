@@ -1,7 +1,7 @@
 module.exports = function main() {
   this.embeds = [{
     "title": "Cloudstream",
-    "description": "Cloudstream is an Android app for streaming and downloading Movies, TV-Series, Anime, Asian dramas and TV channels.",
+    "description": "Cloudstream is an Android app for streaming and downloading Movies, TV-Series, Anime, Asian Dramas and TV channels.",
     "url": "https://cloudstream.cf/",
     "color": 16711680,
     "thumbnail": {
