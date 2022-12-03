@@ -51,7 +51,7 @@ module.exports = function main() {
                 "label": "Archive",
                 "url": "https://github.com/recloudstream/cloudstream-archive",
                 "style": 5,
-                "emoji": ":package:"
+                "emoji": "📦"
           },
             {
                 "type": 2,
