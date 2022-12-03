@@ -2,7 +2,7 @@ module.exports = function main() {
   this.files = ["https://cdn.discordapp.com/attachments/1036144578690031726/1037765163127935016/tv.mp4"]
   this.embeds = [{
     "title": "TV installation guide",
-    "description": "You can read this page to get the idea how to install cs3 app and repos on tv.",
+    "description": "You can read this page to get an idea on how to install cs3 app and repos on TV.",
     "url": "https://rentry.org/cs3tv",
     "color": 16711680,
     "thumbnail": {
