@@ -1,15 +1,15 @@
 module.exports = function main() {
-  this.content = "Cloudstream Related Links"
+  this.content = "**Cloudstream Related Links**"
   this.components = [
     {
         "type": 1,
         "components": [
             {
                 "type": 2,
-                "label": "Click me!",
-                "url": "https://discord.com/developers/docs/interactions/message-components#action-rows",
+                "label": "Site",
+                "url": "https://cloudstream.cf",
                 "style": 5,
-                "emoji": "😀"
+                "emoji": "<:7R:1037622920811384903>"
             },
             {
                 "type": 2,
