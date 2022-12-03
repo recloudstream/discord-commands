@@ -99,7 +99,7 @@ class AsyncConstructor {
                         },
                         {
                             "name": "Repository",
-                            "value": `<cloudstreamrepo://${repo}>`,
+                            "value": `<cloudstreamrepo://${repo.replace("https//", "")}>`,
                             "inline": true
                         },
                         {
