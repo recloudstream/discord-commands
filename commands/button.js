@@ -52,30 +52,34 @@ module.exports = function main() {
                 "url": "https://github.com/recloudstream/cloudstream-archive",
                 "style": 5,
                 "emoji": "📦"
-          },
-            {
-                "type": 2,
-                "label": "Gitdab",
-                "url": "https://gitdab.com/recloudstream",
-                "style": 5,
-                "emoji": {
-                     "name": "gitdab",
-                     "id": "1037775447708160091"
-                  }
-
-          },
-            {
-                "type": 2,
-                "label": "Matrix",
-                "url": "https://matrix.to/#/#lagrapps:matrix.org",
-                "style": 5,
-                "emoji": {
-                     "name": "matrix",
-                     "id": "1037776230759551017"
-                  }
-              
-            }
+          }
         ]
-    }
+    }, {
+      "type": 1,
+      "components": [
+          {
+              "type": 2,
+              "label": "Gitdab",
+              "url": "https://gitdab.com/recloudstream",
+              "style": 5,
+              "emoji": {
+                   "name": "gitdab",
+                   "id": "1037775447708160091"
+                }
+
+        },
+          {
+              "type": 2,
+              "label": "Matrix",
+              "url": "https://matrix.to/#/#lagrapps:matrix.org",
+              "style": 5,
+              "emoji": {
+                   "name": "matrix",
+                   "id": "1037776230759551017"
+                }
+            
+          }
+      ]
+  }
   ]
 }
