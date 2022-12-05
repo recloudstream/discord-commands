@@ -1,3 +1,9 @@
-module.exports = function main() {
-  this.files = ["https://cdn.discordapp.com/attachments/1008207706143871067/1030522800445857812/dlquality.mp4"]
-}
+module.exports = {
+  name: "dlq",
+  nonEligibleUsersChannel: "737729263221997619",
+  async execute(message) {
+    message.channel.send({
+      files: ["https://cdn.discordapp.com/attachments/1008207706143871067/1030522800445857812/dlquality.mp4"]
+    })
+  },
+};

@@ -1,13 +1,15 @@
 const getFiles = require("./src/utils/getFiles.js")
-class AsyncConstructor {
-    constructor(args) {
-        return (async () => {
-            this.embeds = [{
+module.exports = {
+    name: "list",
+    nonEligibleUsersChannel: "737729263221997619",
+    async execute(message) {
+        message.channel.send({
+            embeds: [{
                 "title": "Commands",
                 "description": (await getFiles("commands")).map(json => "." + json.name.replace(".js", "")).join("\n"),
                 "color": 3407616
-            }]
-            this.components = [
+            }],
+            components: [
                 {
                     "type": 1,
                     "components": [
@@ -21,8 +23,6 @@ class AsyncConstructor {
                     ]
                 }
             ]
-            return this;
-        })();
-    }
-}
-module.exports = AsyncConstructor
+        })
+    },
+};

@@ -1,14 +1,20 @@
 const requireFromString = require('require-from-string');
-class AsyncConstructor {
-    constructor(args) {
-        this.args = args;
-        return (async (inputs) => {
-            var file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
-            var repos = requireFromString(file.code)
-            if (inputs?.length > 0 && inputs[0].startsWith("http")) {
-                repos = [{ name: "Custom", url: inputs[0] }]
-            }
-            this.components = [
+module.exports = {
+    name: "providers",
+    nonEligibleUsersChannel: "737729263221997619",
+    onlyChannels: ["737729263221997619"],
+    async execute(message, inputs) {
+        var file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
+        var repos = requireFromString(file.code)
+        if (inputs?.length > 0 && inputs[0].startsWith("http")) {
+            repos = [{ name: "Custom", url: inputs[0] }]
+        }
+        message.channel.send({
+            embeds: [{
+                "title": "Select to view providers",
+                "color": null
+            }],
+            components: [
                 {
                     "components": [
                         {
@@ -17,7 +23,7 @@ class AsyncConstructor {
                             "min_values": 1,
                             "options": repos.map(value => {
                                 var emojiValue = value.emoji;
-                                if(emojiValue.includes(":")) {
+                                if (emojiValue.includes(":")) {
                                     var emojiArray = emojiValue.replace(/<:|>/g, "").split(":")
                                     emojiValue = {
                                         "name": emojiArray[0],
@@ -37,13 +43,6 @@ class AsyncConstructor {
                     "type": 1
                 }
             ]
-            this.embeds = [{
-                "title": "Select to view providers",
-                "color": null
-            }];
-            this.allowedChannels = ["737729263221997619"]
-            return this;
-        })(args);
-    }
-}
-module.exports = AsyncConstructor;
+        })
+    },
+};
