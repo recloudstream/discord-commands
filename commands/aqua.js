@@ -1,3 +1,6 @@
-module.exports = function main() {
-  this.content = "https://github.com/KillerDogeEmpire/AquaStream/releases"
-}
+module.exports = {
+  name: "aqua",
+  async execute(message) {
+      message.channel.send("https://github.com/KillerDogeEmpire/AquaStream/releases")
+  },
+};
