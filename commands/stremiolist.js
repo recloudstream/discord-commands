@@ -75,6 +75,7 @@ Array.prototype.pushUnique = function (item) {
 }
 module.exports = {
     name: "stremiolist",
+    cooldown: 60,
     nonEligibleUsersChannel: "737729263221997619",
     onlyChannels: ["737729263221997619", "851217659395571712"],
     async execute(message) {

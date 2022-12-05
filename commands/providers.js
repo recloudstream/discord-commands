@@ -1,6 +1,7 @@
 const requireFromString = require('require-from-string');
 module.exports = {
     name: "providers",
+    cooldown: 60,
     nonEligibleUsersChannel: "737729263221997619",
     onlyChannels: ["737729263221997619"],
     async execute(message, inputs) {
