@@ -1,7 +1,6 @@
 const axios = require("axios");
 module.exports = {
 	name: "ratelimit",
-	nonEligibleUsersChannel: "737729263221997619",
 	async execute(message) {
 		let data = (await axios.get("https://api.github.com/rate_limit"))?.data
 		var fields = Object.values(data.resources).map(it => {

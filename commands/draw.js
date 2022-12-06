@@ -2,7 +2,6 @@ const { drawImage } = require("./src/utils/drawImage.js")
 module.exports = {
     name: "draw",
     cooldown: 60,
-    nonEligibleUsersChannel: "737729263221997619",
     onlyChannels: ["737729263221997619"],
     async execute(message, inputs) {
         let prompt = inputs.join(" ")

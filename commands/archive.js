@@ -6,7 +6,6 @@ function timestamp(year, month, day, hour, minute, second) {
 module.exports = {
 	name: "archive",
 	cooldown: 60,
-	nonEligibleUsersChannel: "737729263221997619",
 	onlyChannels: ["737729263221997619", "851217659395571712", "1036144578690031726"],
 	async execute(message) {
 		var data = (await axios.get("https://api.github.com/repos/recloudstream/cloudstream-archive/git/trees/master", {

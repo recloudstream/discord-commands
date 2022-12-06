@@ -1,6 +1,5 @@
 module.exports = {
 	name: "petpet",
-	nonEligibleUsersChannel: "737729263221997619",
 	async execute(message) {
 		let user = message.mentions.users.first()
 		if (user == undefined) user = message.author
