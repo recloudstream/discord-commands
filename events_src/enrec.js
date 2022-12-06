@@ -2,7 +2,7 @@ module.exports = [
   function main() {
   this.embeds = [{
      "title": "Movies & Series",
-    "description": "1. Sorastream [Hexated]https://l.cloudstream.cf/dir_hexa) \n2. Superstream [English](https://l.cloudstream.cf/dir_eng)\n3. Ask4movies [English](https://l.cloudstream.cf/dir_eng)
+    "description": "1. Sorastream [Hexated]https://l.cloudstream.cf/dir_hexa) \n2. Superstream [English](https://l.cloudstream.cf/dir_eng)\n3. Ask4movies [English](https://l.cloudstream.cf/dir_eng)",
     "color": null
       }
     ]
