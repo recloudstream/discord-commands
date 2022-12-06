@@ -1,6 +1,5 @@
 module.exports = {
   name: "wsa",
-  nonEligibleUsersChannel: "737729263221997619",
   async execute(message) {
     message.channel.send({
       files: ["https://cdn.discordapp.com/attachments/737724143570780260/1031100838212538388/wsa.mp4"],

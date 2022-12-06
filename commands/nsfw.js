@@ -1,6 +1,5 @@
 module.exports = {
   name: "nsfw",
-  nonEligibleUsersChannel: "737729263221997619",
   async execute(message) {
     if ((new Date()).getMonth() === 10 && Math.random() <= 0.35)
       message.channel.send({ content: "https://tenor.com/view/no-nut-november-nnn-discord-ryan-gosling-embed-fail-gif-23637560" })

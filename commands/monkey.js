@@ -2,7 +2,6 @@ const { Snake } = require('discord-gamecord');
 module.exports = {
   name: "monkey",
   cooldown: 60,
-  nonEligibleUsersChannel: "737729263221997619",
   onlyChannels: ["737729263221997619", "851217659395571712"],
   async execute(message) {
     const Game = new Snake({

@@ -9,7 +9,6 @@ function hash(url) {
 }
 module.exports = {
     name: "pinfo",
-    nonEligibleUsersChannel: "737729263221997619",
     async execute(message, inputs) {
         try {
             let repoId = inputs?.at(0)

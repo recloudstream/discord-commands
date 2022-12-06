@@ -1,7 +1,6 @@
 const axios = require("axios");
 module.exports = {
     name: "stable",
-    nonEligibleUsersChannel: "737729263221997619",
     async execute(message) {
         let data = (await axios.get("https://api.github.com/repos/recloudstream/cloudstream/releases")).data
         let stable = data.find(it => it && !it.prerelease && it.tag_name !== "pre-release")

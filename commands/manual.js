@@ -1,7 +1,6 @@
 const requireFromString = require('require-from-string');
 module.exports = {
   name: "manual",
-  nonEligibleUsersChannel: "737729263221997619",
   async execute(message) {
     var file = globalThis.events_src.filter(json => json.name == "repos.js")[0]
     var repos = requireFromString(file.code)

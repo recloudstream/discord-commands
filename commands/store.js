@@ -1,6 +1,5 @@
 module.exports = {
   name: "store",
-  nonEligibleUsersChannel: "737729263221997619",
   async execute(message) {
     message.channel.send({
       embeds: [{

@@ -1,6 +1,5 @@
 module.exports = {
   name: "pre",
-  nonEligibleUsersChannel: "737729263221997619",
   async execute(message) {
     var downloadLink = "https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"
     message.channel.send({

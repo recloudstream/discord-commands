@@ -1,6 +1,5 @@
 module.exports = {
   name: "stremio",
-  nonEligibleUsersChannel: "737729263221997619",
   async execute(message) {
     message.channel.send({
       files: ["https://cdn.discordapp.com/attachments/1016716040648015972/1037956353181880330/stremio.mp4"],
