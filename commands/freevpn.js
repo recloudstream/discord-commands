@@ -1,6 +1,9 @@
-module.exports = function main() {
-this.embeds = [{
-      "title": "Winscribe",
+module.exports = {
+  name: "freevpn",
+  async execute(message) {
+    message.channel.send({
+      embeds: [{
+"title": "Winscribe",
       "description": "**Features:**\n🔹10 server locations\n🔹10 GB/month bandwidth\n🔹Unlimited simultaneous connection\n\n**Server locations:** U.S., Canada, U.K, Hong Kong, France, Germany, Netherlands, Switzerland, Norway, and Romania",
       "url": "https://play.google.com/store/apps/details?id=com.windscribe.vpn&hl=en&gl=US",
       "color": 0,
@@ -24,5 +27,7 @@ this.embeds = [{
       "thumbnail": {
         "url": "https://is2-ssl.mzstatic.com/image/thumb/Purple112/v4/dd/af/ea/ddafea05-cb7c-3d74-1f2a-03279fa6d349/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp"
       }
-  }]
-}
+      }]
+    })
+  },
+};
