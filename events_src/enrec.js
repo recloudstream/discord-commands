@@ -24,7 +24,7 @@ module.exports = [
   function main() {
   this.embeds = [{
        "title": "TV & Sports",
-    "description": "1. IPTV-org **(TV)** [Multilingual](https://l.cloudstream.cf/dir_multi)\n2. Time4TV **(Sports)** [Hexated](https://l.cloudstream.cf/dir_hexa)\n3. 9goal **(Football) [Multilingual](https://l.cloudstream.cf/dir_multi)**\n4. TV247 [Hexated]https://l.cloudstream.cf/dir_hexa)\n5. 123TV [Hexated](https://l.cloudstream.cf/dir_hexa)",
+    "description": "1. IPTV-org **(TV)** [Multilingual](https://l.cloudstream.cf/dir_multi)\n2. Time4TV **(Sports)** [Hexated](https://l.cloudstream.cf/dir_hexa)\n3. 9goal **(Football) [Multilingual](https://l.cloudstream.cf/dir_multi)**\n4. TV247 [Hexated](https://l.cloudstream.cf/dir_hexa)\n5. 123TV [Hexated](https://l.cloudstream.cf/dir_hexa)",
     "color": null
     }]
   }
