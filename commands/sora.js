@@ -12,7 +12,7 @@ module.exports = {
       },
       {
         "title": "How to install Sorastream",
-        "description": "**Step 1:** Install [**Hexated**](https://cs.repo/?raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/builds/repo.json) repo.\n**Step 2:** Click on the Hexated repo.\n**Step 3:** Scroll down the source list and install Sorastream.",
+        "description": "**Step 1:** Install [**Hexated**](https://l.cloudstream.cf/dir_hexa) repo.\n**Step 2:** Click on the Hexated repo.\n**Step 3:** Scroll down the source list and install Sorastream.",
         "color": 11485,
         "image": {
           "url": "https://cdn.discordapp.com/attachments/1008207706143871067/1047801841729159198/4HrnIIn.png"
