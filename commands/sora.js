@@ -2,20 +2,13 @@ module.exports = {
   name: "sora",
   async execute(message) {
     message.channel.send({
+      files: ["https://cdn.discordapp.com/attachments/1015131233824538624/1050689200158162974/sorainstall.mp4"],
       embeds: [{
         "title": "Sorastream",
         "description": "Sorastream is a MultiAPI based source that scrapes **A LOT** of sites and uses TMDb for catalogue.",
         "color": 11485,
         "thumbnail": {
           "url": "https://raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/SoraStream/Icon.png"
-        }
-      },
-      {
-        "title": "How to install Sorastream",
-        "description": "**Step 1:** Install [**Hexated**](https://l.cloudstream.cf/dir_hexa) repo.\n**Step 2:** Click on the Hexated repo.\n**Step 3:** Scroll down the source list and install Sorastream.",
-        "color": 11485,
-        "image": {
-          "url": "https://cdn.discordapp.com/attachments/1008207706143871067/1047801841729159198/4HrnIIn.png"
         }
       },
       {
