@@ -6,7 +6,7 @@ module.exports = {
         "title": "Click none and select your source.",
         "color": 16711680,
         "image": {
-          "url": "https://cdn.discordapp.com/attachments/737729263221997619/1034390187372982343/none.png"
+          "url": "https://media.discordapp.net/attachments/737724143570780260/1050724486955151370/image.png"
         }
       }]
     })
