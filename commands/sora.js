@@ -2,7 +2,7 @@ module.exports = {
   name: "sora",
   async execute(message) {
     message.channel.send({
-      files: ["https://cdn.discordapp.com/attachments/1015131233824538624/1050689200158162974/sorainstall.mp4"],
+      files: ["https://cdn.discordapp.com/attachments/1047169440246136832/1050693497780437034/howtoinstallsora.mp4"],
       embeds: [{
         "title": "Sorastream",
         "description": "Sorastream is a MultiAPI based source that scrapes **A LOT** of sites and uses TMDb for catalogue.",
