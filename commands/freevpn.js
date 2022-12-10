@@ -23,7 +23,7 @@ module.exports = {
     {
       "title": "Oracle Self-hosted VPN",
       "description": "**Features: **\n🔹1 server location\n🔹10TB/month\n🔹up to 500Mbps speed\n\n**Server locations:** U.S., Netherlands, Switzerland. \n\n[Sample video tutorial for Oracle](https://www.youtube.com/watch?v=E-CLtExRzX8)\n\n⚠️We won't provide any support for self-hosted VPN method. Go to other servers or sites to get the support. Also, you can do similar process with other services too (AWS, Google cloud etc.).",
-      "url": "https://blogs.oracle.com/developers/post/launching-your-own-free-private-vpn-in-the-oracle-cloud"
+      "url": "https://blogs.oracle.com/developers/post/launching-your-own-free-private-vpn-in-the-oracle-cloud",
       "color": 16711680,
       "thumbnail": {
         "url": "https://leadsbridge.com/wp-content/themes/leadsbridge/img/integration-lg-logos/logo106.png"
