@@ -3,7 +3,7 @@ module.exports = {
   async execute(message) {
     message.channel.send({
       embeds: [{
-"title": "Winscribe",
+"title": "Windscribe",
       "description": "**Features:**\n🔹10 server locations\n🔹10 GB/month bandwidth\n🔹Unlimited simultaneous connection\n\n**Server locations:** U.S., Canada, U.K, Hong Kong, France, Germany, Netherlands, Switzerland, Norway, and Romania",
       "url": "https://play.google.com/store/apps/details?id=com.windscribe.vpn&hl=en&gl=US",
       "color": 16777215,
