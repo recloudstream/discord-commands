@@ -1,6 +1,6 @@
 module.exports = {
     name: "duckling",
-    onlyUsers: ["777478477569196044"],
+    onlyUsers: ["777478477569196044", "326466810150912000"],
     async execute(message) {
         message.channel.send({
         files: ["https://media.discordapp.net/attachments/737724143570780260/1049346871946117173/cs3start.mp4"],
