@@ -7,7 +7,6 @@ module.exports = {
             embeds: [{
       "description": "**Type or copy and paste these codes** in the **settings > extensions > add repository > repository url** and click **add repository**.",
       "color": null
-    }
 
       }]
         })
