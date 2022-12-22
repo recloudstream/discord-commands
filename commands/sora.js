@@ -2,19 +2,14 @@ module.exports = {
   name: "sora",
   async execute(message) {
     message.channel.send({
-      files: ["https://cdn.discordapp.com/attachments/1047169440246136832/1050693497780437034/howtoinstallsora.mp4"],
+      //files: ["https://cdn.discordapp.com/attachments/1047169440246136832/1050693497780437034/howtoinstallsora.mp4"],
       embeds: [{
-        "title": "Sorastream",
-        "description": "Sorastream is a MultiAPI based source that scrapes **A LOT** of sites and uses TMDb for catalogue.",
-        "color": 11485,
-        "thumbnail": {
-          "url": "https://raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/SoraStream/Icon.png"
-        }
-      },
-      {
-        "title": "FAQ",
-        "description": "**1. The episode loading is taking too long**\nAs it scrapes a lot of sites, it takes time to load all of them. Skip loading after 3-5 seconds.\n**2. Some sources are not loading**\nSora has some geo restricted sources. Use a VPN to access those sources.\n**3. Some titles are showing \"No links found\"**\nSora uses TMDb for catalogue, not the sources. So, it may show titles that no site has.",
-        "color": 11485
+            "title": "Sorastream",
+      "description": "Sorastream is a MultiAPI based source that scrapes **A LOT of FHD and 4K** sites and uses TMDb for catalogue.\n\n[**Click here**](https://discord.com/channels/737724143126052974/1055438609643221012/1055438612596015145) to get the **installation guide and FAQ.**",
+      "color": 468479,
+      "thumbnail": {
+        "url": "https://images-ext-1.discordapp.net/external/1nGBtYNveL_7kDK785oBsJY3dcKFFPUTZfAo0ZM7F4U/https/raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/SoraStream/Icon.png"
+      }
       }]
     })
   },
