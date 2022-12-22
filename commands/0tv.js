@@ -27,7 +27,7 @@ module.exports = {
     },
     {
       "title": "🧩 To install the repositories on TV",
-      "description": " [Follow this method]() to know to do this process.",
+      "description": " [Follow this method](https://discord.com/channels/737724143126052974/1055346838644994128/1055346842449227848) to know to do this process.",
       "color": 16755968
       }]
     })
