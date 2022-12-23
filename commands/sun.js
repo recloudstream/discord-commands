@@ -12,7 +12,7 @@ module.exports = {
       }
     },
     {
-      "description": "Some features that are coming soon include a remote control to control your tv, and access to your self-hosted jellyfin server.\nis this alright",
+      "description": "Some features that are coming soon include a remote control to control your tv, and access to your self-hosted jellyfin server",
       "color": 16740352
     },
     {
