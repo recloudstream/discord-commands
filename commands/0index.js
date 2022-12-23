@@ -11,7 +11,7 @@ module.exports = {
                 }
             },
             {
-                "description": "[**Standard Setup Process**](https://discord.com/channels/737724143126052974/1055345748822204487/)\n[**Manual Setup Process]**(https://discord.com/channels/737724143126052974/1055346838644994128/)\n[**TV Setup Process**](https://discord.com/channels/737724143126052974/1055347828794339378/)\n[**Installation on Windows 11**](https://discord.com/channels/737724143126052974/1055348198320902175/)\n[**Installation on Linux**](https://discord.com/channels/737724143126052974/1055348413216083989/)",
+                "description": "[**Standard Setup Process**](https://discord.com/channels/737724143126052974/1055345748822204487/)\n[**Manual Setup Process**](https://discord.com/channels/737724143126052974/1055346838644994128/)\n[**TV Setup Process**](https://discord.com/channels/737724143126052974/1055347828794339378/)\n[**Installation on Windows 11**](https://discord.com/channels/737724143126052974/1055348198320902175/)\n[**Installation on Linux**](https://discord.com/channels/737724143126052974/1055348413216083989/)",
                 "color": 688895,
                 "image": {
                     "url": "https://media.discordapp.net/attachments/1031508285393748008/1055345600771674172/2_setup.png?width=1440&height=360"
