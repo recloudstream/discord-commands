@@ -3,7 +3,6 @@ module.exports = {
     onlyUsers: ["777478477569196044", "326466810150912000"],
     async execute(message) {
         message.channel.send({
-        files: ["https://media.discordapp.net/attachments/737724143570780260/1049346871946117173/cs3start.mp4"],
       embeds: [{
         "description": "<#1055344541558919229>\n<#1055345442495397938>",
       "color": 688895,
