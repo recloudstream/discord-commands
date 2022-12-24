@@ -4,7 +4,7 @@
 ```js
 module.exports = {
     name: "marl",
-    onlyUsers: [""],
+    //onlyUsers: [""],
     async execute(message) {
         message.channel.send({
             //files: [""],
