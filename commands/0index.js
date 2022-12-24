@@ -1,5 +1,5 @@
 module.exports = {
-    name: "duckling",
+    name: "index",
     onlyUsers: ["777478477569196044", "326466810150912000"],
     async execute(message) {
         message.channel.send({
