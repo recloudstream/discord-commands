@@ -1,4 +1,17 @@
 
 # Extensions
 
-Very good explanation thank u i know
+```js
+module.exports = {
+    name: "marl",
+    onlyUsers: [""],
+    async execute(message) {
+        message.channel.send({
+            //files: [""],
+            embeds: [{
+
+            }]
+        })
+    },
+};
+```
