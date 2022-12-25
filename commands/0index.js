@@ -13,7 +13,7 @@ module.exports = {
     },
     {
       "title": "Cloudstream Setup",
-      "description": "[**Standard Setup Process**](https://discord.com/channels/737724143126052974/1055345748822204487/)\n[**Manual Setup Process**](https://discord.com/channels/737724143126052974/1055346838644994128/)\n[**TV Setup Process**](https://discord.com/channels/737724143126052974/1055347828794339378/)\n[**Installation on Windows 11**](https://discord.com/channels/737724143126052974/1055348198320902175/)\n[**Installation on Linux**](https://discord.com/channels/737724143126052974/1055348413216083989/)",
+      "description": "[**Standard Setup Process**](https://discord.com/channels/737724143126052974/1055345748822204487/)\n[**TV Setup Process**](https://discord.com/channels/737724143126052974/1055347828794339378/)\n[**Installation on Windows 11**](https://discord.com/channels/737724143126052974/1055348198320902175/)\n[**Installation on Linux**](https://discord.com/channels/737724143126052974/1055348413216083989/)",
       "color": 688895,
       "thumbnail": {
         "url": "https://media.discordapp.net/attachments/1015131233824538624/1055368886406619157/game-bloons-arcane-mastery-and-staff-pack.png"
