@@ -9,7 +9,7 @@ module.exports = {
                 "color": 688895,
                 "thumbnail": {
                     "https://media.discordapp.net/attachments/1038362748049965056/1056563038750257152/7R.png"
-      }
+       }
             },
             {
                 "title": "Cloudstream Setup",
