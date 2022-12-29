@@ -5,7 +5,7 @@ module.exports = {
         message.channel.send({
             embeds: [{
                 "title": "Cloudstream on WSA Installation Guide",
-                "description": "Windows Subsystem for Android enables your Windows device to run Android applications. Choose your Windows OS version to get the installation guide.",
+                "description": "Windows Subsystem for Android™️ enables your Windows device to run Android applications. Choose your Windows OS version to get the installation guide.",
              
                 "color": 1083392,
                 "thumbnail": {
