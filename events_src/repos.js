@@ -35,7 +35,7 @@ module.exports = [
         shortcut: "drepo"
     },
     {
-        name: "LikeDev",
+        name: "LikDev",
         url: "https://l.cloudstream.cf/dir_likrepo",
         raw_url: "https://l.cloudstream.cf/likrepo",
         emoji: "🇮🇳",
