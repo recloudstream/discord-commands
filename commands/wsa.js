@@ -6,7 +6,7 @@ module.exports = {
             //files: [""],
             embeds: [{
 
-                "title": "CS3 on WSA guide",
+                "title": "WSA installation Guide For Win 10 & 11",
                 "description": "Windows Subsystem for Android™️ enables your Windows device to run Android applications. Choose your Windows OS version to get the installation guide.",
                 "url": "https://discord.com/channels/737724143126052974/1055348198320902175/1055348205430259732",
                 "color": 1083392,
