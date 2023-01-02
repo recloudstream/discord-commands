@@ -24,9 +24,10 @@ module.exports = {
 			var time = new Date(commit.commit.author.date)
 			var tstamp = timestamp(time.getUTCFullYear(), time.getUTCMonth(), time.getUTCDate(), time.getUTCHours(), time.getUTCMinutes(), time.getUTCSeconds())
 			if (idx === 0) name = name + " **(Latest)**"
+			let commit = commit.commit.message.split("\n")[0]?.slice(0, 50)
 			return {
 				"name": name,
-				"value": `[${commit.sha.slice(0, 7) + ".apk"}](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(0, 7)}.apk)\n${commit.commit.message}\n**Update was <t:${tstamp}:R>**`,
+				"value": `[${commit.sha.slice(0, 7) + ".apk"}](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(0, 7)}.apk)\n${commit}\n**Update was <t:${tstamp}:R>**`,
 				"inline": false
 			}
 		})
