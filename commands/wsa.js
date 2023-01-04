@@ -7,7 +7,7 @@ module.exports = {
             embeds: [{
 
                 "title": "WSA installation Guide For Win 10 & 11",
-                "description": "Windows Subsystem for Android™️ enables your Windows device to run Android applications. This WSA version is android 13, rooted and includes Google play services and Magisk.",
+                "description": "Windows Subsystem for Android™️(WSA) enables your Windows 10 and 11 devices to run Android applications. The latest WSA version includes Android 13, Google Play Services and Magisk.",
                 "url": "https://rentry.org/wsa",
                 "color": 1083392,
                 "thumbnail": {
