@@ -1,40 +1,18 @@
 module.exports = {
-  name: "enrec",
-  async execute(message) {
-    message.channel.send({
-      content: "**Recommended English Sources**",
-      components: [
-        {
-          "components": [
-            {
-              "custom_id": "select_commands",
-              "max_values": 1,
-              "min_values": 1,
-              "options": [
-                {
-                  "label": "Movies & Series",
-                  "value": "enrec.js|0"
-                },
-                {
-                  "label": "Anime",
-                  "value": "enrec.js|1"
-                },
-                {
-                  "label": "Asian",
-                  "value": "enrec.js|2"
-                },
-                {
-                  "label": "TV & Sports",
-                  "value": "enrec.js|3"
-                }
-              ],
-              "placeholder": "Click to select",
-              "type": 3
-            }
-          ],
-          "type": 1
-        }
-      ]
-    })
-  },
+    name: "marl",
+    //onlyUsers: [""],
+    async execute(message) {
+        message.channel.send({
+            //files: [""],
+            embeds: [{
+      "title": "Recommended English Sources",
+      "description": "These are the best English extensions for cloudstream.",
+      "url": "https://discord.com/channels/737724143126052974/1060460344398577675/",
+      "color": null,
+      "thumbnail": {
+        "url": "https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif"
+      }
+            }]
+        })
+    },
 };
