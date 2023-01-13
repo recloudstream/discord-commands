@@ -53,7 +53,7 @@ module.exports = {
           time.getUTCSeconds()
         );
         if (idx === 0) name = name + " **(Latest)**";
-        let commit = commit.commit.message.split("\n")[0]?.slice(0, 50);
+        let commitMsg = commit.commit.message.split("\n")[0]?.slice(0, 50);
         return {
           name: name,
           value: `[${
@@ -61,7 +61,7 @@ module.exports = {
           }](https://github.com/recloudstream/cloudstream-archive/raw/master/${commit.sha.slice(
             0,
             7
-          )}.apk)\n${commit}\n**Update was <t:${tstamp}:R>**`,
+          )}.apk)\n${commitMsg}\n**Update was <t:${tstamp}:R>**`,
           inline: false,
         };
       });
