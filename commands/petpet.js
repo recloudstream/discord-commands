@@ -11,7 +11,7 @@ module.exports = {
       data?.result ||
       `https://api.obamabot.me/v1/image/petpet?avatar=https:%2f%2fcdn.discordapp.com%2favatars%2f${user.id}%2f${user.avatar}.png`;
     message.channel.send({
-      files: [img],
+      files: [{attachment: img, name: "petpet.gif"}],
     });
   },
 };
