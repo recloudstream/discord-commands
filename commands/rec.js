@@ -5,7 +5,6 @@ module.exports = {
     message.channel.send({
       //files: [""],
       embeds: [
-        {
           {
       "title": "Recommended Sources",
       "description": "This page covers the various sources recommended by the developers, ranked, based on their reliability, quality, speed and content availability.",
