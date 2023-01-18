@@ -12,7 +12,7 @@ module.exports = {
           url: "https://cs3docs.pages.dev/",
           color: null,
           image: {
-            url: "https://media.discordapp.net/attachments/1015131233824538624/1063502811444289617/cover.png?width=1341&height=670",
+            url: "https://cdn.discordapp.com/attachments/1015131233824538624/1064779145139212429/eIhhoOg.png",
           },
         },
       ],
