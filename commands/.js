@@ -6,9 +6,9 @@ module.exports = {
       //files: [""],
       embeds: [
         {
-          title: "Cloudstream Documentation",
+          title: "Cloudstream 3 Documentation",
           description:
-            "A comprehensive guide that explores the various features, settings, integrations available within the app and assists with the fixes of the various issues that you may encounter.",
+            "The guide explores the various features, settings, integrations available within the app and assists with troubleshooting.",
           url: "https://cs3docs.pages.dev/",
           color: null,
           image: {
