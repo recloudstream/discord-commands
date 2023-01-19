@@ -6,7 +6,7 @@ module.exports = {
         {
           title: "Troubleshooting",
           description:
-            "You can read this page to get the idea how to fix your posted issue.",
+            "You can read this page to get an idea on how to fix your posted issue.",
           url: "https://cs3docs.pages.dev/troubleshooting/",
           color: 16711680,
           thumbnail: {
