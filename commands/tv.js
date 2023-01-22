@@ -8,7 +8,7 @@ module.exports = {
           title: "TV installation guide",
           description:
             "You can read this page to get an idea on how to install cs3 app and repos on TV.",
-          url: "https://cs3docs.pages.dev/other-devices/tv/",
+          url: "https://docs.cloudstream.cf/other-devices/tv/",
           color: 16711680,
           thumbnail: {
             url: "https://cdn-icons-png.flaticon.com/512/716/716429.png",

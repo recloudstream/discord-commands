@@ -7,7 +7,7 @@ module.exports = {
         {
           title: "Sorastream",
           description:
-            "Sorastream is a MultiAPI based source that scrapes **A LOT of FHD and 4K** sites and uses TMDb for catalogue.\n\n[**Click here**](https://cs3docs.pages.dev/more-stuff/miscellaneous/#installing-sorastream) to get the **installation guide and FAQ.**",
+            "Sorastream is a MultiAPI based source that scrapes **A LOT of FHD and 4K** sites and uses TMDb for catalogue.\n\n[**Click here**](https://docs.cloudstream.cf/more-stuff/miscellaneous/#installing-sorastream) to get the **installation guide and FAQ.**",
           color: 468479,
           thumbnail: {
             url: "https://images-ext-1.discordapp.net/external/1nGBtYNveL_7kDK785oBsJY3dcKFFPUTZfAo0ZM7F4U/https/raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/SoraStream/Icon.png",
