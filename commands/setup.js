@@ -11,7 +11,6 @@ module.exports = {
           description:
             "**Step 1:** Download and install the [pre-release](https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk).\n**Step 2:** Install the [repositories](https://cloudstream.cf/repos).",
           color: 16711680,
-          
         },
       ],
     });
