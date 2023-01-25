@@ -22,6 +22,7 @@ module.exports = {
       "thumbnail": {
         "url": "https://media.discordapp.net/attachments/1015131233824538624/1067698324817334333/r1TR2Lu.webp"
       },
+        },
       ],
     });
   },
