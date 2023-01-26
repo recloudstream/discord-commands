@@ -15,10 +15,11 @@ module.exports = {
             url: "https://cdn.discordapp.com/attachments/1008654622740729897/1039955155099078726/wsa.png",
           },
         },
-        
+
         {
-          "description": "If you face any issue installing WSA, join the [**support server**](https://discord.com/invite/2thee7zzHZ).",
-      "color": 39423
+          description:
+            "If you face any issue installing WSA, join the [**support server**](https://discord.com/invite/2thee7zzHZ).",
+          color: 39423,
         },
       ],
     });
