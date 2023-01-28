@@ -68,7 +68,7 @@ module.exports = [
     url: "https://l.cloudstream.cf/dir_dsh",
     raw_url: "https://l.cloudstream.cf/dsh",
     emoji: "🌏",
-    shortcut: "dshrepo",
+    shortcut: "dsh",
   },
   {
     name: "NSFW",
