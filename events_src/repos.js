@@ -50,13 +50,6 @@ module.exports = [
     shortcut: "storm",
   },
   {
-    name: "Crunchyroll",
-    url: "https://l.cloudstream.cf/dir_kamy",
-    raw_url: "https://l.cloudstream.cf/kamy",
-    emoji: "<:cr:1045375485154173098>",
-    shortcut: "kamy",
-  },
-  {
     name: "Eddy",
     url: "https://l.cloudstream.cf/dir_eddy",
     raw_url: "https://l.cloudstream.cf/eddy",
