@@ -70,7 +70,7 @@ module.exports = [
     emoji: "🇨🇳",
     shortcut: "horis",
   },
-    {
+  {
     name: "Dontseehere",
     url: "https://l.cloudstream.cf/dir_dsh",
     raw_url: "https://l.cloudstream.cf/dsh",
