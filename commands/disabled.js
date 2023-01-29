@@ -8,7 +8,7 @@ module.exports = {
         {
           title: "Disabled Extension",
           description:
-            "You can't enable a disabled extension. The extension is broken and there is no ETA for the fix. So, use the recommended sources.",
+            "You can't enable a disabled extension. The extension is broken and there is no ETA for the fix. So, use the [**recommended sources**](https://docs.cloudstream.cf/recsrc/).",
           color: 16745728,
           thumbnail: {
             url: "https://cdn-icons-png.flaticon.com/512/7878/7878631.png",
