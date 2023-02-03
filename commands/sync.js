@@ -1,8 +1,8 @@
 module.exports = {
-  name: "sync",
+  name: "very soon",
   async execute(message) {
     message.channel.send({
-      content: "https://rentry.org/gitsync",
+      content: "<:copium:1070939903724109866>",
     });
   },
 };
