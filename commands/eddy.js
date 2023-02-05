@@ -5,7 +5,7 @@ module.exports = {
         message.channel.send({
             //files: [""],
             embeds: [{
-                "description": "[Click here](https://l.cloudstream.cf/dir_nsfw) to install NSFW repo or use code \"nsfw\".",
+                "description": "[Click here](https://l.cloudstream.cf/dir_eddy) to install Eddy repo or use code \"eddy\".",
                 "color": 16777215
             }]
         })
