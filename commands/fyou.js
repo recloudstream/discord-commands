@@ -1,4 +1,4 @@
-  module.exports = {
+module.exports = {
   name: "fyou",
   async execute(message) {
     message.channel.send({
