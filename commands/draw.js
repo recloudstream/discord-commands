@@ -13,7 +13,7 @@ module.exports = {
     this.files = resp?.files;
     */
     message.channel.send({
-      content: `Please wait ${Math.ceil(Math.random() * 60)}s`,
+      content: `Please wait ${Math.ceil(Math.random() * 69)}s`,
     });
   },
 };
