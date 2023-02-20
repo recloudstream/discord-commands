@@ -53,7 +53,7 @@ module.exports = [
     name: "Crunchyroll",
     url: "https://l.cloudstream.cf/dir_kamy",
     raw_url: "https://l.cloudstream.cf/kamy",
-    emoji: "<:okredfineheresthefix:1077222163590950924>",
+    emoji: "🧻",
     shortcut: "kamy",
   },
   {
