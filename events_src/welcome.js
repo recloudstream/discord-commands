@@ -41,6 +41,6 @@ module.exports = function main(member) {
       "https://cdn.discordapp.com/attachments/1008296541926199337/1036935177508757544/manual.mp4",
     ];
   } catch (ex) {
-    console.error(ex);
+    //console.error(ex);
   }
 };
