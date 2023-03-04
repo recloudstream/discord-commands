@@ -6,7 +6,7 @@ module.exports = {
       //files: [""],
       embeds: [
         {
-          title: "Recommend Anime Extensions",
+          title: "Recommended Anime Extensions",
           url: "https://docs.cloudstream.cf/recsrc/#anime",
           color: null,
           image: {
